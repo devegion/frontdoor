@@ -1,0 +1,50 @@
+{
+  "HomePage": {
+    "welcome": "Buna Lume!"
+  },
+  "AboutPage": {
+    "welcome": "Salut din Despre!"
+  },
+  "Header": {
+    "openNavbarMenu": "Deschide meniul",
+    "closeNavbarMenu": "Inchide meniul",
+    "services": {
+      "title": "Servicii",
+      "aria": "Meniu Servicii",
+      "webDevelopment": {
+        "title": "Dezvoltare Web",
+        "description": "Text here"
+      },
+      "mobileDevelopment": {
+        "title": "Dezvoltare Mobile",
+        "description": "Text here"
+      },
+      "uiuxDesign": {
+        "title": "UI/UX Design",
+        "description": "Text here"
+      }
+    },
+    "projects": "Proiecte",
+    "aboutUs": "Despre Noi",
+    "languagesArea": "Limbi",
+    "callToAction": "Contacteaza-ne"
+  },
+  "Footer": {
+    "services": {
+      "title": "Servicii",
+      "webDevelopment": {
+        "title": "Dezvoltare Web"
+      },
+      "mobileDevelopment": {
+        "title": "Dezvoltare Mobile"
+      },
+      "uiuxDesign": {
+        "title": "UI/UX Design"
+      }
+    },
+    "projects": "Proiecte",
+    "aboutUs": "Despre Noi",
+    "pricing": "Preturi",
+    "FAQ": "Intrebari Frecvente"
+  }
+}

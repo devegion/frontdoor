@@ -1,0 +1,50 @@
+{
+  "HomePage": {
+    "welcome": "Hello World!"
+  },
+  "AboutPage": {
+    "welcome": "Hello from About!"
+  },
+  "Header": {
+    "openNavbarMenu": "Close menu",
+    "closeNavbarMenu": "Open menu",
+    "services": {
+      "title": "Services",
+      "aria": "Services Menu",
+      "webDevelopment": {
+        "title": "Web Development",
+        "description": "Text here"
+      },
+      "mobileDevelopment": {
+        "title": "Mobile Development",
+        "description": "Text here"
+      },
+      "uiuxDesign": {
+        "title": "UI/UX Design",
+        "description": "Text here"
+      }
+    },
+    "projects": "Projects",
+    "aboutUs": "About Us",
+    "languagesArea": "Languages",
+    "callToAction": "Book a Call"
+  },
+  "Footer": {
+    "services": {
+      "title": "Services",
+      "webDevelopment": {
+        "title": "Web Development"
+      },
+      "mobileDevelopment": {
+        "title": "Mobile Development"
+      },
+      "uiuxDesign": {
+        "title": "UI/UX Design"
+      }
+    },
+    "projects": "Projects",
+    "aboutUs": "About Us",
+    "pricing": "Pricing",
+    "FAQ": "FAQ"
+  }
+}
