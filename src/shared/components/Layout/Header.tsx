@@ -57,7 +57,12 @@ export function Header() {
   }
 
   return (
-    <Navbar onMenuOpenChange={setIsMenuOpen} height='5rem' maxWidth='xl' shouldHideOnScroll>
+    <Navbar
+      onMenuOpenChange={setIsMenuOpen}
+      isBlurred={false}
+      height='5rem'
+      maxWidth='xl'
+      shouldHideOnScroll>
       <NavbarContent>
         <NavbarMenuToggle
           aria-label={isMenuOpen ? t('closeNavbarMenu') : t('openNavbarMenu')}
