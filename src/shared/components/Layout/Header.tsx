@@ -1,6 +1,6 @@
 'use client';
 
-import { Logo } from '../atoms/Logo';
+import { Logo } from '../ui/Logo';
 import { ChevronDown, ChevronUp, Languages, Laptop, Tablet, PenTool, Compass } from 'lucide-react';
 
 import {

@@ -27,10 +27,10 @@ import {
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from '@/shared/components/atoms/Carousel';
-import { Section, SectionDescription, SectionHeading } from '@/shared/components/atoms/Section';
-import { AnimatedTooltip } from '@/shared/components/atoms/AnimatedTooltip';
-import { FAQ } from '@/shared/components/atoms/FAQ';
+} from '@/shared/components/ui/Carousel';
+import { Section, SectionDescription, SectionHeading } from '@/shared/components/ui/Section';
+import { AnimatedTooltip } from '@/shared/components/ui/AnimatedTooltip';
+import { FAQ } from '@/shared/components/ui/FAQ';
 
 import { Divider } from '@heroui/divider';
 import { Button } from '@heroui/button';

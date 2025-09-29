@@ -1,5 +1,3 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
-
 ## Getting Started
 
 First, run the development server:
@@ -16,21 +14,31 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Tech Stack
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Next.js 15** - [docs](https://nextjs.org/docs)
 
-## Learn More
+- **Next-intl** - [docs](https://next-intl.dev/)
 
-To learn more about Next.js, take a look at the following resources:
+- **Tailwind CSS V4** - [docs](https://tailwindcss.com/docs/installation/using-vite)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **HeroUI** - [docs](https://www.heroui.com/docs/guide/introduction)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Framer Motion** - [docs](https://motion.dev/)
 
-## Deploy on Vercel
+- **Embla Carousel** - [docs](https://www.embla-carousel.com/)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Shadcn Components** - [docs](https://ui.shadcn.com/)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Lucide React** - [docs](https://lucide.dev/icons/)
+
+## Things to know before coding
+
+- When using **HeroUI** components, always import them from their respective files.
+  - **DO NOT** `import Button from '@heroui/react'`
+  - **DO** `import { Button } from '@heroui/button'`
+- When creating new pages, implement SSG workaround for i18n, like explained
+  [here].(https://next-intl.dev/docs/routing/setup#static-rendering)
+- When using **svg files** add them to the `assets` folder & import them as regular react
+  components: `import { Logo } from '../ui/Logo'` (possible be using custom turbopack loader, see
+  next.config.ts)

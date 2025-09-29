@@ -1,4 +1,4 @@
-import { Logo } from '../atoms/Logo';
+import { Logo } from '../ui/Logo';
 import { Heart } from 'lucide-react';
 
 import { Link } from '@heroui/link';
