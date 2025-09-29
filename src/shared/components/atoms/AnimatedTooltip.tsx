@@ -5,6 +5,7 @@ import { motion, useTransform, AnimatePresence, useMotionValue, useSpring } from
 
 import Image, { StaticImageData } from 'next/image';
 
+// !! Acernity UI component
 export const AnimatedTooltip = ({
   items,
 }: {
@@ -66,11 +67,11 @@ export const AnimatedTooltip = ({
           </AnimatePresence>
           <Image
             onMouseMove={handleMouseMove}
-            height={100}
-            width={100}
+            height={200}
+            width={200}
             src={item.image}
             alt={item.name}
-            className='relative !m-0 size-16 rounded-full border-2 border-white object-cover object-top !p-0 transition duration-500 group-hover:z-30 group-hover:scale-105'
+            className='relative !m-0 size-18 rounded-full border-2 border-white object-cover object-top !p-0 transition duration-500 group-hover:z-30 group-hover:scale-105 xl:size-20'
           />
         </div>
       ))}

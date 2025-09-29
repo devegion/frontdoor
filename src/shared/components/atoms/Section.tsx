@@ -10,16 +10,23 @@ export function Section({
   className?: ClassNameValue;
 }) {
   return (
-    <section
-      className={cn('mx-auto min-h-[60vh] w-10/12 max-w-7xl space-y-16 xl:w-9/12', className)}>
-      {children}
-    </section>
+    <section className={cn('mx-auto w-10/12 max-w-7xl xl:w-8/12', className)}>{children}</section>
   );
 }
 
-export function SectionHeading({ children }: { children: ReactNode }) {
+export function SectionHeading({
+  children,
+  className,
+}: {
+  children: ReactNode;
+  className?: ClassNameValue;
+}) {
   return (
-    <h2 className='font-headline text-center text-3xl font-bold sm:text-4xl xl:text-5xl'>
+    <h2
+      className={cn(
+        'font-headline text-center text-3xl font-bold sm:text-4xl xl:text-5xl',
+        className,
+      )}>
       {children}
     </h2>
   );

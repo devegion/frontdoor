@@ -1,7 +1,7 @@
 'use client';
 
 import { Logo } from '../atoms/Logo';
-import { ChevronDown, ChevronUp, Languages, Globe, Smartphone, WandSparkles } from 'lucide-react';
+import { ChevronDown, ChevronUp, Languages, Laptop, Tablet, PenTool, Compass } from 'lucide-react';
 
 import {
   Navbar,
@@ -114,7 +114,7 @@ export function Header() {
                 href='/services/web-development'
                 startContent={
                   <div className='group rounded-md p-1 transition-all duration-200 group-hover:shadow'>
-                    <Globe />
+                    <Laptop />
                   </div>
                 }
                 key='web_development'
@@ -125,7 +125,7 @@ export function Header() {
                 href='/services/mobile-development'
                 startContent={
                   <div className='group rounded-md p-1 transition-all duration-200 group-hover:shadow'>
-                    <Smartphone />
+                    <Tablet />
                   </div>
                 }
                 key='mobile_development'
@@ -136,12 +136,23 @@ export function Header() {
                 href='/services/uiux-design'
                 startContent={
                   <div className='group rounded-md p-1 transition-all duration-200 group-hover:shadow'>
-                    <WandSparkles />
+                    <PenTool />
                   </div>
                 }
                 key='uiux_design'
                 description={t('services.uiuxDesign.description')}>
                 {t('services.uiuxDesign.title')}
+              </DropdownItem>
+              <DropdownItem
+                href='/services/uiux-design'
+                startContent={
+                  <div className='group rounded-md p-1 transition-all duration-200 group-hover:shadow'>
+                    <Compass />
+                  </div>
+                }
+                key='consulting'
+                description={t('services.uiuxDesign.description')}>
+                Consulting
               </DropdownItem>
             </DropdownSection>
           </DropdownMenu>
@@ -208,6 +219,9 @@ export function Header() {
                 </Link>
                 <Link href='/services/uiux-design' key='uiux_design'>
                   {t('services.uiuxDesign.title')}
+                </Link>
+                <Link href='/services/uiux-design' key='consulting'>
+                  Consulting
                 </Link>
               </div>
             </AccordionItem>
