@@ -38,7 +38,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
   - **DO NOT** `import Button from '@heroui/react'`
   - **DO** `import { Button } from '@heroui/button'`
 - When creating new pages, implement SSG workaround for i18n, like explained
-  [here].(https://next-intl.dev/docs/routing/setup#static-rendering)
+  [here](https://next-intl.dev/docs/routing/setup#static-rendering).
 - When using **svg files** add them to the `assets` folder & import them as regular react
   components: `import { Logo } from '../ui/Logo'` (possible be using custom turbopack loader, see
   next.config.ts)
