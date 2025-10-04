@@ -4,9 +4,8 @@ import { routing } from '@/i18n/routing';
 import { setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { Inter, Roboto } from 'next/font/google';
-import { Header } from '@/shared/components/Layout/Header';
-import { HeroProvider } from '@/shared/utils/HeroProvider';
-import { Footer } from '@/shared/components/Layout/Footer';
+import { Header, Footer } from '@/shared/components';
+import { HeroProvider } from '@/shared/utils';
 
 const inter = Inter({
   subsets: ['latin'],
