@@ -5,7 +5,7 @@ import { Link } from '@heroui/link';
 
 export function Footer() {
   return (
-    <footer className='bg-default-100 mt-32 flex min-h-96 flex-col gap-8 p-6 xl:mt-44 xl:p-12 2xl:mt-64'>
+    <footer className='bg-default-100 flex min-h-96 flex-col gap-8 p-6 xl:p-12'>
       <div className='grid grow grid-cols-1 gap-8 xl:grid-cols-4'>
         <div className='flex flex-col items-start'>
           <div className='-ml-3'>

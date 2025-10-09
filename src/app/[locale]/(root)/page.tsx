@@ -58,7 +58,7 @@ export default async function HomePage({ params }: PageProps<'/[locale]'>) {
   // const t = await getTranslations('HomePage');
 
   return (
-    <div className='space-y-8 xl:space-y-16'>
+    <div className='mb-32 space-y-8 xl:mb-44 xl:space-y-16 2xl:mb-64'>
       <Section className='flex min-h-[calc(100vh_-_80px)] flex-col items-center sm:justify-center'>
         <div className='flex w-full flex-col justify-center'>
           <div className='mt-20 flex flex-col items-center space-y-8 pb-[calc(80px_+_10vh)]'>
@@ -85,7 +85,7 @@ export default async function HomePage({ params }: PageProps<'/[locale]'>) {
             </div>
           </div>
         </div>
-        <div className='flex w-full items-center justify-center'>
+        <div className='mb-20 flex w-full items-center justify-center sm:mb-0'>
           <Stats />
         </div>
       </Section>

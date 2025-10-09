@@ -43,7 +43,7 @@ export function Stats() {
   // ];
 
   return (
-    <div className='flex max-w-xl grow flex-col items-center justify-around gap-8 sm:h-12 sm:max-w-3xl sm:flex-row lg:max-w-4xl'>
+    <div className='flex max-w-xl grow flex-col items-center justify-around gap-12 sm:h-12 sm:max-w-3xl sm:flex-row sm:gap-8 lg:max-w-4xl'>
       <div className='flex flex-col items-center justify-center'>
         <div className='text-primary text-4xl font-bold'>
           <AnimatedNumber from={0} to={8} suffix={'+'} />

@@ -57,7 +57,7 @@ export function ScrollRevealText() {
   };
 
   return (
-    <div className='flex justify-center p-8'>
+    <div className='mb-20 flex justify-center p-8 sm:mb-36'>
       <p
         ref={containerRef}
         className='max-w-4xl text-4xl leading-tight font-bold sm:text-4xl md:text-5xl lg:text-6xl'>
