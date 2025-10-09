@@ -125,6 +125,23 @@
     "title": "Povestea Noastra",
     "story": {
       "introduction": "Traind la granita dintre mediul academic si industrie, povestea noastra isi are inceputurile in 2020, cand fondatorul nostru, Damian, a creat un loc de crestere pentru acele talente care isi doreau sa realizeze mai mult. Organizand workshopuri, prezentari tehnice si evenimente de socializare, el a urmarit indeaproape persoanele vocale, cu standarde inalte, concentrate pe acumularea de cunostinte si dezvoltarea abilitatilor. Proiecte au fost realizate, aplicatii create, fundatii construite. Acum, ne deschidem portile catre un public larg de antreprenori care doresc sa isi consolideze partea tehnica a afacerii lor – catre tine."
+    },
+    "timeline": {
+      "phase1": {
+        "title": "Inceputul",
+        "year": "2020",
+        "description": "Povestea noastra a inceput in 2020, cand fondatorul nostru, Damian — un profesionist senior in industria tech — a vizualizat un loc unde talentele ambitioase pot creste dincolo de limitele mediului academic. Prin intermediul Google Developer Students Club, a organizat workshopuri, prezentari tehnice si evenimente de networking, construind o comunitate unde curiozitatea, colaborarea si standardele inalte prosperau. Aceasta fundatie a stabilit scena pentru crestere continua si impact de durata."
+      },
+      "phase2": {
+        "title": "Inovatie Interna",
+        "year": "2022",
+        "description": "Pana in 2022, echipa noastra crescuse mai puternica, iar calitatea muncii noastre a atins noi culmi. Cu expertiza castigata din proiecte diverse, am inceput sa dezvoltam propriile produse interne, transformand idei indraznete in solutii practice. Acest pas a marcat o noua era de creativitate, proprietate si inovatie in compania noastra."
+      },
+      "phase3": {
+        "title": "A Face Diferenta",
+        "year": "2025",
+        "description": "In 2025, ne-am indreptat privirea catre crearea unui impact semnificativ. Dincolo de livrarea de solutii web si mobile excelente, ne-am concentrat pe generarea de schimbare in industria si comunitatea noastra. Viziunea noastra s-a extins pentru a nu doar construi produse, ci si sa imputernicim oamenii, cultivand un mediu unde tehnologia si potentialul uman cresc impreuna."
+      }
     }
   },
   "Header": {

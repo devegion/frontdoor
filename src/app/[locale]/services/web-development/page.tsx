@@ -1,4 +1,5 @@
 import { routing } from '@/i18n/routing';
+import { Incoming } from '@/shared/components/layout/Incoming';
 import { hasLocale } from 'next-intl';
 import { setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
@@ -13,5 +14,5 @@ export default async function WebDevelopmentPage({
   }
   setRequestLocale(locale);
 
-  return <div>It works!</div>;
+  return <Incoming />;
 }

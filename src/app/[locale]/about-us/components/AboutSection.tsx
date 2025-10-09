@@ -8,7 +8,7 @@ export function AboutSection({
   images,
 }: {
   title: string;
-  year: number;
+  year: string;
   description: string;
   color?: string;
   images?: StaticImageData[];

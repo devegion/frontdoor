@@ -10,11 +10,6 @@ import {
   Section,
   SectionDescription,
   SectionHeading,
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
   FAQ,
 } from '@/shared/components';
 
@@ -22,7 +17,7 @@ import { Button } from '@heroui/button';
 import { Chip } from '@heroui/chip';
 import { Link } from '@heroui/link';
 
-import { ProjectCard, SolutionCard, ReviewCard } from '@/app/[locale]/(root)/components';
+import { ProjectCard, SolutionCard } from '@/app/[locale]/(root)/components';
 
 import {
   DavidImg,

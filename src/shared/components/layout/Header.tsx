@@ -185,7 +185,13 @@ export function Header() {
 
       <NavbarContent justify='end'>
         <NavbarItem className='hidden md:flex'>
-          <Button disableRipple as={Link} color='primary' href='/' variant='shadow' radius='lg'>
+          <Button
+            disableRipple
+            as={Link}
+            color='primary'
+            href='/contact-us'
+            variant='shadow'
+            radius='lg'>
             {t('callToAction')}
           </Button>
         </NavbarItem>
