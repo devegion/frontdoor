@@ -24,27 +24,62 @@ import { Link } from '@heroui/link';
 
 import { ProjectCard, SolutionCard, ReviewCard } from '@/app/[locale]/(root)/components';
 
-import { DavidImg, DevegionFrameImg, RestaurantmFrameImg, RestaurantmFrameImg2 } from '@/assets';
+import {
+  DavidImg,
+  DamianImg,
+  GabImg,
+  BeaImg,
+  PopImg,
+  PoeImg,
+  CristiImg,
+  DevegionFrameImg,
+  RestaurantmFrameImg,
+  RestaurantmFrameImg2,
+} from '@/assets';
 import { Stats } from '@/app/[locale]/(root)/components/Stats';
 
 const people = [
   {
     id: 1,
+    name: 'Damian',
+    designation: 'Fullstack Developer',
+    image: DamianImg,
+  },
+  {
+    id: 2,
+    name: 'Gab',
+    designation: 'UI/UX Designer',
+    image: GabImg,
+  },
+  {
+    id: 3,
     name: 'David',
     designation: 'Fullstack Developer',
     image: DavidImg,
   },
   {
-    id: 2,
+    id: 4,
     name: 'Bea',
     designation: 'Fullstack Developer',
-    image: DavidImg,
+    image: BeaImg,
   },
   {
-    id: 3,
-    name: 'Damian',
-    designation: 'Fullstack Developer',
-    image: DavidImg,
+    id: 5,
+    name: 'Iulian Poe',
+    designation: 'Mobile Developer',
+    image: PoeImg,
+  },
+  {
+    id: 6,
+    name: 'Iulian Pop',
+    designation: 'Mobile Developer',
+    image: PopImg,
+  },
+  {
+    id: 7,
+    name: 'Cristi',
+    designation: 'Web Developer',
+    image: CristiImg,
   },
 ];
 
@@ -55,7 +90,7 @@ export default async function HomePage({ params }: PageProps<'/[locale]'>) {
   }
   setRequestLocale(locale);
 
-  // const t = await getTranslations('HomePage');
+  const t = await getTranslations('HomePage');
 
   return (
     <div className='mb-32 space-y-8 xl:mb-44 xl:space-y-16 2xl:mb-64'>
@@ -64,23 +99,19 @@ export default async function HomePage({ params }: PageProps<'/[locale]'>) {
           <div className='mt-20 flex flex-col items-center space-y-8 pb-[calc(80px_+_10vh)]'>
             <div className='flex flex-col items-center sm:gap-3'>
               <h1 className='font-headline text-center text-3xl font-bold sm:text-5xl xl:text-6xl'>
-                Web & Mobile
+                {t('hero.header.part1')}
               </h1>
               <span className='sm:bg-primary-100 text-2xl font-bold text-nowrap sm:w-min sm:rounded-2xl sm:p-4 sm:text-4xl xl:text-5xl'>
-                start-to-end
+                {t('hero.header.part2')}
               </span>
             </div>
-            <p className='text-default-700 max-w-2xl text-center'>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam architecto sapiente
-              odit alias, nemo fuga placeat et amet fugit itaque dicta rerum, officia asperiores
-              vitae?
-            </p>
+            <p className='text-default-700 max-w-2xl text-center'>{t('hero.description')}</p>
             <div className='flex flex-col items-center justify-center gap-5 sm:flex-row'>
               <Button as={Link} href='/' size='lg' color='primary' radius='lg'>
-                Start a project <ArrowRight className='size-[1em]' />
+                {t('startProject')} <ArrowRight className='size-[1em]' />
               </Button>
               <Button as={Link} href='/' variant='faded' size='lg' radius='lg'>
-                View our work
+                {t('viewWork')}
               </Button>
             </div>
           </div>
@@ -94,69 +125,66 @@ export default async function HomePage({ params }: PageProps<'/[locale]'>) {
           <div className='flex w-full flex-col items-center gap-16'>
             <div className='flex flex-col items-center gap-8'>
               <Chip size='md' variant='bordered' className='py-4 shadow' radius='full'>
-                Our Services
+                {t('services.badge')}
               </Chip>
-              <SectionHeading>What we do...</SectionHeading>
-              <SectionDescription>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem aliquid velit
-                dolorem quos corrupti numquam accusantium quo veritatis, magnam error, laudantium
-                similique non commodi? Et?
-              </SectionDescription>
+              <SectionHeading>{t('services.title')}</SectionHeading>
+              <SectionDescription>{t('services.description')}</SectionDescription>
             </div>
             <div className='mx-auto grid w-full max-w-lg grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-5 lg:grid-rows-6'>
               <SolutionCard
-                title='Web Development'
-                description='Loremg 12j3h asdhaisf sadvu sd1sj asdjadasdn'
+                title={t('services.webDevelopment.title')}
+                description={t('services.webDevelopment.description')}
                 strongPoints={[
-                  'Strong Point 1',
-                  'Strong Point 1',
-                  'Strong Point 1',
-                  'Strong Point 1',
-                  'Strong Point 1',
-                  'Strong Point 1',
+                  t('services.webDevelopment.strongPoint1'),
+                  t('services.webDevelopment.strongPoint2'),
+                  t('services.webDevelopment.strongPoint3'),
+                  t('services.webDevelopment.strongPoint4'),
+                  t('services.webDevelopment.strongPoint5'),
+                  t('services.webDevelopment.strongPoint6'),
                 ]}
                 icon={<Laptop />}
-                href='/'
+                href='/services/web-development'
                 className='lg:col-span-3 lg:row-span-3'
                 classNames={{ strongPoints: 'lg:grid-cols-2' }}
               />
-
               <SolutionCard
-                title='UI/UX Design'
-                description='Loremg 12j3h asdhaisf sadvu sd1sj asdjadasdn'
+                title={t('services.uiuxDesign.title')}
+                description={t('services.uiuxDesign.description')}
                 strongPoints={[
-                  'Strong Point 1',
-                  'Strong Point 1',
-                  'Strong Point 1',
-                  'Strong Point 1',
+                  t('services.uiuxDesign.strongPoint1'),
+                  t('services.uiuxDesign.strongPoint2'),
+                  t('services.uiuxDesign.strongPoint3'),
+                  t('services.uiuxDesign.strongPoint4'),
                 ]}
                 icon={<PenTool />}
                 href='/'
                 className='lg:col-span-2 lg:row-span-4'
               />
-
               <SolutionCard
-                title='Mobile Development'
-                description='Loremg 12j3h asdhaisf sadvu sd1sj asdjadasdn'
+                title={t('services.mobileDevelopment.title')}
+                description={t('services.mobileDevelopment.description')}
                 strongPoints={[
-                  'Strong Point 1',
-                  'Strong Point 1',
-                  'Strong Point 1',
-                  'Strong Point 1',
+                  t('services.mobileDevelopment.strongPoint1'),
+                  t('services.mobileDevelopment.strongPoint2'),
+                  t('services.mobileDevelopment.strongPoint3'),
+                  t('services.mobileDevelopment.strongPoint4'),
                 ]}
                 icon={<Tablet />}
                 href='/'
                 className='lg:col-span-3 lg:row-span-3'
                 classNames={{ strongPoints: 'lg:grid-cols-2' }}
               />
-
               <SolutionCard
-                title='Consulting'
-                description='Loremg 12j3h asdhaisf sadvu sd1sj asdjadasdn'
-                strongPoints={[]}
+                title={t('services.consulting.title')}
+                description={t('services.consulting.description')}
+                strongPoints={[
+                  t('services.consulting.strongPoint1'),
+                  t('services.consulting.strongPoint2'),
+                ]}
                 icon={<Compass />}
                 href='/'
                 className='lg:col-span-2 lg:row-span-2'
+                classNames={{ strongPoints: 'lg:grid-cols-2' }}
               />
             </div>
           </div>
@@ -164,15 +192,13 @@ export default async function HomePage({ params }: PageProps<'/[locale]'>) {
         <Section>
           <div className='flex w-full flex-col items-center gap-8 lg:items-start lg:gap-16'>
             <Chip size='md' variant='bordered' className='py-4 shadow lg:hidden' radius='full'>
-              Our Projects
+              {t('projects.badge')}
             </Chip>
             <div className='flex w-full flex-col items-center gap-8 lg:items-start lg:gap-4'>
-              <SectionHeading>Some of our work...</SectionHeading>
+              <SectionHeading>{t('projects.title')}</SectionHeading>
               <div className='flex flex-col items-center gap-8 lg:w-full lg:flex-row lg:items-end lg:justify-between'>
                 <SectionDescription className='lg:text-start'>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem aliquid velit
-                  dolorem quos corrupti numquam accusantium quo veritatis, magnam error, laudantium
-                  similique non commodi? Et?
+                  {t('projects.description')}
                 </SectionDescription>
                 <Button
                   as={Link}
@@ -182,36 +208,41 @@ export default async function HomePage({ params }: PageProps<'/[locale]'>) {
                   color='default'
                   className='hidden lg:flex'
                   radius='full'>
-                  View all projects
+                  {t('viewProjects')}
                 </Button>
               </div>
             </div>
             <div className='mx-auto grid grid-cols-1 gap-8 sm:grid-cols-2 lg:gap-16'>
               <ProjectCard
-                title='Project 1'
-                description={`Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem aliquid velit dolorem
-              non commodi? Et?`}
+                title={t('projects.restaurantTm.title')}
+                description={t('projects.restaurantTm.description')}
                 image={RestaurantmFrameImg}
-                projectLink='/'
-                detailsLink='/'
-                badges={['web']}
-              />
-              <ProjectCard
-                title='Project 1'
-                description={`Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem aliquid velit dolorem
-              non commodi? Et?`}
-                image={DevegionFrameImg}
-                projectLink='/'
-                detailsLink='/'
+                projectLink='/projects'
+                detailsLink='/projects'
                 badges={[]}
               />
               <ProjectCard
-                title='Project 1'
-                description={`Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem aliquid velit dolorem
-              non commodi? Et?`}
+                title={t('projects.carCareRo.title')}
+                description={t('projects.carCareRo.description')}
+                image={DevegionFrameImg}
+                projectLink='/projects'
+                detailsLink='/projects'
+                badges={[]}
+              />
+              <ProjectCard
+                title={t('projects.paulPhoto.title')}
+                description={t('projects.paulPhoto.description')}
                 image={RestaurantmFrameImg2}
-                projectLink='/'
-                detailsLink='/'
+                projectLink='/projects'
+                detailsLink='/projects'
+                badges={[]}
+              />
+              <ProjectCard
+                title={t('projects.vaudior.title')}
+                description={t('projects.vaudior.description')}
+                image={RestaurantmFrameImg2}
+                projectLink='/projects'
+                detailsLink='/projects'
                 badges={[]}
               />
             </div>
@@ -220,17 +251,13 @@ export default async function HomePage({ params }: PageProps<'/[locale]'>) {
         <Section>
           <div className='flex w-full flex-col items-center gap-8'>
             <Chip size='md' variant='bordered' className='py-4 shadow' radius='full'>
-              Our People
+              {t('people.badge')}
             </Chip>
-            <SectionHeading>Meet the developers</SectionHeading>
+            <SectionHeading>{t('people.title')}</SectionHeading>
             <div className='flex flex-row items-center justify-center'>
               <AnimatedTooltip items={people} />
             </div>
-            <SectionDescription>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem aliquid velit dolorem
-              quos corrupti numquam accusantium quo veritatis, magnam error, laudantium similique
-              non commodi? Et?
-            </SectionDescription>
+            <SectionDescription>{t('people.description')}</SectionDescription>
             <Button
               as={Link}
               href='/about-us'
@@ -238,24 +265,21 @@ export default async function HomePage({ params }: PageProps<'/[locale]'>) {
               size='lg'
               color='primary'
               radius='lg'>
-              Read the full story
+              {t('fullStory')}
             </Button>
           </div>
         </Section>
-        <Section>
+        {/* <Section>
           <div className='flex flex-col items-center gap-16'>
             <div className='flex flex-col items-center gap-8'>
               <Chip size='md' variant='bordered' className='py-4 shadow' radius='full'>
-                Feedback
+                {t('reviews.badge')}
               </Chip>
               <SectionHeading>
-                Why clients <span className='text-primary'>Love</span> <br /> Devegion
+                {t('reviews.title1')} <span className='text-primary'>{t('reviews.title2')}</span>
+                <br /> {t('reviews.title3')}
               </SectionHeading>
-              <SectionDescription>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem aliquid velit
-                dolorem quos corrupti numquam accusantium quo veritatis, magnam error, laudantium
-                similique non commodi? Et?
-              </SectionDescription>
+              <SectionDescription>{t('reviews.description')}</SectionDescription>
             </div>
             <Carousel
               opts={{
@@ -310,7 +334,7 @@ export default async function HomePage({ params }: PageProps<'/[locale]'>) {
               </div>
             </Carousel>
           </div>
-        </Section>
+        </Section> */}
         <Section>
           <div className='flex w-full flex-col items-center gap-16'>
             <div className='flex flex-col items-center gap-8'>
@@ -320,12 +344,8 @@ export default async function HomePage({ params }: PageProps<'/[locale]'>) {
                 className='flex size-11 max-w-none min-w-auto items-center justify-center rounded-full'>
                 <CircleQuestionMark className='size-8' />
               </Chip>
-              <SectionHeading>Frequently Asked Questions</SectionHeading>
-              <SectionDescription>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem aliquid velit
-                dolorem quos corrupti numquam accusantium quo veritatis, magnam error, laudantium
-                similique non commodi? Et?
-              </SectionDescription>
+              <SectionHeading>{t('faq.title')}</SectionHeading>
+              <SectionDescription>{t('faq.description')}</SectionDescription>
             </div>
             <div className='mx-auto w-full max-w-5xl'>
               <FAQ />

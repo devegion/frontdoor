@@ -1,6 +1,124 @@
 {
   "HomePage": {
-    "welcome": "Hello World!"
+    "hero": {
+      "header": {
+        "part1": "Web & Mobile",
+        "part2": "start-to-end"
+      },
+      "description": "Complete web and mobile solutions, from initial strategy to final delivery. We blend cutting-edge development, thoughtful design, and expert consulting to bring digital products to life. Built on a foundation of knowledge-sharing, we've trained hundreds of developers who power innovation.",
+      "stats": {
+        "experience": "Years of Experience",
+        "projects": "Projects We've Built",
+        "clients": "Happy Clients"
+      }
+    },
+    "services": {
+      "badge": "Our Services",
+      "title": "What we do...",
+      "description": "Web, mobile, UI/UX, and consulting services tailored for modern businesses. We deliver high-quality web platforms, mobile apps, outstanding user experience design, and strategic guidance to help your company grow. Our expertise covers the entire digital journey—from concept to launch.",
+      "webDevelopment": {
+        "title": "Web Development",
+        "description": "",
+        "strongPoint1": "Fast loading and mobile-friendly",
+        "strongPoint2": "SEO-optimized for better rankings",
+        "strongPoint3": "Secure and reliable platforms",
+        "strongPoint4": "Easy content management systems",
+        "strongPoint5": "Custom websites built for your needs",
+        "strongPoint6": "Scalable solutions that grow with you"
+      },
+      "mobileDevelopment": {
+        "title": "Mobile Development",
+        "description": "",
+        "strongPoint1": "Native iOS and Android apps",
+        "strongPoint2": "Cross-platform solutions",
+        "strongPoint3": "Smooth performance and animations",
+        "strongPoint4": "Offline functionality support"
+      },
+      "uiuxDesign": {
+        "title": "UI/UX Design",
+        "description": "",
+        "strongPoint1": "Beautiful interfaces users love",
+        "strongPoint2": "Intuitive and easy navigation",
+        "strongPoint3": "Mobile-first design approach",
+        "strongPoint4": "Data-driven design decisions"
+      },
+      "consulting": {
+        "title": "Consulting",
+        "description": "",
+        "strongPoint1": "Strategic digital planning",
+        "strongPoint2": "Technology stack recommendations",
+        "strongPoint3": "Process optimization guidance",
+        "strongPoint4": "Long-term growth strategies"
+      }
+    },
+    "projects": {
+      "badge": "Our Projects",
+      "title": "Some of our work...",
+      "description": "Explore the web and mobile solutions we've crafted for clients across industries. Each project reflects our dedication to excellence and innovation.",
+      "carCareRo": {
+        "title": "CarCareRo",
+        "description": "A mobile app that helps drivers manage their car insurance policies and maintenance schedules. Track service history, set reminders, and keep all vehicle documents in one place."
+      },
+      "restaurantTm": {
+        "title": "RestaurantTM",
+        "description": "A multi-tenant mobile platform for Timisoara's dining scene. Discover restaurants, read authentic reviews, explore locations, and find your next favorite meal in the city."
+      },
+      "paulPhoto": {
+        "title": "PaulPhoto",
+        "description": "A custom-made web portfolio platform for a photographe. Showcase stunning photography collections with flexible layouts, easy content management, and a professional presentation that lets the work speak for itself."
+      },
+      "vaudior": {
+        "title": "VaudioR",
+        "description": "An innovative VR mobile app that transforms audiobooks into immersive experiences. AI-generated landscapes and scenes bring stories to life, creating visual environments that match the narrative you're hearing."
+      }
+    },
+    "people": {
+      "badge": "Our People",
+      "title": "Meet the developers",
+      "description": "Meet our team of young innovators. We bring fresh ideas, passion for technology, and a drive to build solutions that make a difference. Together, we turn challenges into opportunities."
+    },
+    "reviews": {
+      "badge": "Feedback",
+      "title1": "Why Clients",
+      "title2": "Love",
+      "title3": "Devegion",
+      "description": "Hear what our clients have to say. Real projects, real results, real feedback from businesses we've helped grow."
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "description": "Got questions? Find quick answers to the most common questions about our services, process, pricing, and timelines.",
+      "q1": {
+        "title": "How long does it take to build a web or mobile app?",
+        "answer": "Project timelines vary based on complexity and requirements. A simple website takes 4-6 weeks, while a custom web or mobile application typically requires 3-6 months. We provide detailed timelines after understanding your specific needs."
+      },
+      "q2": {
+        "title": "What services do you offer?",
+        "answer": "We provide complete web development, mobile app development (iOS and Android), UI/UX design, and strategic consulting. From concept to launch, we handle every aspect of your digital product, including ongoing support and maintenance."
+      },
+      "q3": {
+        "title": "How much does a custom software project cost?",
+        "answer": "Costs depend on project scope, features, and complexity. We offer transparent pricing and provide detailed quotes after discussing your requirements. Contact us for a free consultation and personalized estimate for your project."
+      },
+      "q4": {
+        "title": "Do you provide support after launch?",
+        "answer": "Yes! We offer ongoing maintenance, updates, bug fixes, and technical support after your project goes live. We're committed to ensuring your digital product continues to perform optimally and grows with your business needs."
+      },
+      "q5": {
+        "title": "What technologies do you work with?",
+        "answer": "We use modern, proven technologies including React, Node.js, React Native, and cloud platforms like AWS. Our tech stack is chosen based on your project's specific requirements to ensure scalability, security, and optimal performance."
+      },
+      "q6": {
+        "title": "Who owns the code and intellectual property?",
+        "answer": "You own everything. Once the project is completed, all source code, designs, documentation, and intellectual property rights are transferred to you. We believe in full transparency and client ownership."
+      }
+    },
+
+    "startProject": "Start a Project",
+    "viewProjects": "View all Projects",
+    "viewWork": "View our work",
+    "discover": "Discover",
+    "viewDetails": "View Details",
+    "fullStory": "Read the full story"
   },
   "AboutPage": {
     "welcome": "Hello from About!",
@@ -26,6 +144,10 @@
       "uiuxDesign": {
         "title": "UI/UX Design",
         "description": "Text here"
+      },
+      "consulting": {
+        "title": "Consulting",
+        "description": "Text here"
       }
     },
     "projects": "Projects",
@@ -34,6 +156,16 @@
     "callToAction": "Book a Call"
   },
   "Footer": {
+    "tagline": "Building with",
+    "copyright": "©2025 Devegion. All rights reserved.",
+    "privacyPolicy": "Privacy Policy",
+    "quickAccess": {
+      "title": "Quick Access",
+      "home": "Home",
+      "projects": "Projects",
+      "aboutUs": "About Us",
+      "contactUs": "Contact Us"
+    },
     "services": {
       "title": "Services",
       "webDevelopment": {
@@ -44,11 +176,13 @@
       },
       "uiuxDesign": {
         "title": "UI/UX Design"
+      },
+      "consulting": {
+        "title": "Consulting"
       }
     },
-    "projects": "Projects",
-    "aboutUs": "About Us",
-    "pricing": "Pricing",
-    "FAQ": "FAQ"
+    "projects": {
+      "title": "Projects"
+    }
   }
 }

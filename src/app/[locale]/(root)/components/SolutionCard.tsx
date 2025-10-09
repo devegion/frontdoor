@@ -5,6 +5,7 @@ import { cn } from '@/shared/utils/cn';
 import { Button } from '@heroui/button';
 import { ArrowRight, Check } from 'lucide-react';
 import { Chip } from '@heroui/chip';
+import { useTranslations } from 'next-intl';
 
 export function SolutionCard({
   title,
@@ -22,6 +23,8 @@ export function SolutionCard({
   className: ClassNameValue;
   classNames?: { strongPoints?: ClassNameValue };
 }) {
+  const t = useTranslations('HomePage');
+
   return (
     <Link
       color='foreground'
@@ -37,7 +40,7 @@ export function SolutionCard({
             variant='light'
             className='hidden opacity-0 transition duration-300 group-hover:opacity-100 sm:flex'
             endContent={<ArrowRight className='size-[1em]' />}>
-            Discover
+            {t('discover')}
           </Button>
         </div>
         <p className='text-default-700'>{description}</p>
@@ -63,7 +66,7 @@ export function SolutionCard({
         variant='light'
         className='sm:hidden'
         endContent={<ArrowRight className='size-[1em]' />}>
-        Discover
+        {t('discover')}
       </Button>
     </Link>
   );

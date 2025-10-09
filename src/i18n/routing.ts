@@ -22,8 +22,14 @@ export const routing = defineRouting({
     '/services/uiux-design': {
       ro: '/servicii/uiux-design',
     },
+    '/services/consulting': {
+      ro: '/servicii/consultanta',
+    },
     '/contact-us': {
       ro: '/contact',
+    },
+    '/privacy-policy': {
+      ro: '/politica-de-confidentialitate',
     },
   },
 

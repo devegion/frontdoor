@@ -3,6 +3,7 @@
 import { animate, useInView, useMotionValue } from 'framer-motion';
 import { useEffect, useRef, useState } from 'react';
 import { Divider } from '@heroui/divider';
+import { useTranslations } from 'next-intl';
 
 interface AnimatedNumberProps {
   from?: number;
@@ -36,11 +37,7 @@ function AnimatedNumber({ from = 0, to, duration = 1, suffix = '' }: AnimatedNum
 }
 
 export function Stats() {
-  // const stats = [
-  //   { from: 0, to: 8, suffix: '+', label: 'Years of Experience' },
-  //   { from: 0, to: 20, suffix: '+', label: 'Projects We’ve Built' },
-  //   { from: 0, to: 100, suffix: '%', label: 'Happy Clients' },
-  // ];
+  const t = useTranslations('HomePage');
 
   return (
     <div className='flex max-w-xl grow flex-col items-center justify-around gap-12 sm:h-12 sm:max-w-3xl sm:flex-row sm:gap-8 lg:max-w-4xl'>
@@ -48,7 +45,7 @@ export function Stats() {
         <div className='text-primary text-4xl font-bold'>
           <AnimatedNumber from={0} to={8} suffix={'+'} />
         </div>
-        <div className='text-default-500 text-center'>Years of Experience</div>
+        <div className='text-default-500 text-center'>{t('hero.stats.experience')}</div>
       </div>
       <Divider className='block w-20 sm:hidden' />
       <Divider orientation='vertical' className='hidden sm:block' />
@@ -56,7 +53,7 @@ export function Stats() {
         <div className='text-primary text-4xl font-bold'>
           <AnimatedNumber from={0} to={20} suffix={'+'} />
         </div>
-        <div className='text-default-500 text-center'>Projects We’ve Built</div>
+        <div className='text-default-500 text-center'>{t('hero.stats.projects')}</div>
       </div>
       <Divider className='block w-20 sm:hidden' />
       <Divider orientation='vertical' className='hidden sm:block' />
@@ -64,7 +61,7 @@ export function Stats() {
         <div className='text-primary text-4xl font-bold'>
           <AnimatedNumber from={0} to={100} suffix={'%'} />
         </div>
-        <div className='text-default-500 text-center'>Happy Clients</div>
+        <div className='text-default-500 text-center'>{t('hero.stats.clients')}</div>
       </div>
     </div>
   );

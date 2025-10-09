@@ -30,6 +30,7 @@ import { Locale, useLocale, useTranslations } from 'next-intl';
 
 import { Key, useState, useTransition } from 'react';
 import { cn } from '@/shared/utils/cn';
+import type { RouterConfig } from '@react-types/shared';
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -42,6 +43,49 @@ export function Header() {
   const locale = useLocale();
 
   const t = useTranslations('Header');
+
+  const navItems = [
+    {
+      label: t('projects'),
+      href: '/projects',
+      subItems: [],
+    },
+    {
+      label: t('services.title'),
+      aria: t('services.aria'),
+      subItems: [
+        {
+          label: t('services.webDevelopment.title'),
+          description: t('services.webDevelopment.description'),
+          href: '/services/web-development',
+          icon: <Laptop />,
+        },
+        {
+          label: t('services.mobileDevelopment.title'),
+          description: t('services.mobileDevelopment.description'),
+          href: '/services/mobile-development',
+          icon: <Tablet />,
+        },
+        {
+          label: t('services.uiuxDesign.title'),
+          description: t('services.uiuxDesign.description'),
+          href: '/services/uiux-design',
+          icon: <PenTool />,
+        },
+        {
+          label: t('services.consulting.title'),
+          description: t('services.consulting.description'),
+          href: '/services/consulting',
+          icon: <Compass />,
+        },
+      ],
+    },
+    {
+      label: t('aboutUs'),
+      href: '/about-us',
+      subItems: [],
+    },
+  ];
 
   function onSelectionChange(event: Key) {
     const nextLocale = event as Locale;
@@ -76,98 +120,67 @@ export function Header() {
       </NavbarContent>
 
       <NavbarContent className='hidden gap-4 md:flex' justify='center'>
-        <NavbarItem>
-          <Button
-            disableRipple
-            radius='lg'
-            variant='light'
-            className='font-semibold'
-            href='/'
-            as={Link}>
-            {t('projects')}
-          </Button>
-        </NavbarItem>
-        <Dropdown showArrow shouldBlockScroll={false} onOpenChange={setIsDropdownOpen}>
-          <NavbarItem>
-            <DropdownTrigger>
-              <Button
-                disableRipple
-                radius='lg'
-                variant='light'
-                className='font-semibold'
-                endContent={
-                  isDropdownOpen ?
-                    <ChevronUp className='mt-0.5 size-4' />
-                  : <ChevronDown className='mt-0.5 size-4' />
-                }>
-                {t('services.title')}
-              </Button>
-            </DropdownTrigger>
-          </NavbarItem>
-          <DropdownMenu classNames={{ list: 'p-1' }} aria-label={t('services.aria')}>
-            <DropdownSection
-              classNames={{
-                group: 'space-y-2',
-                base: 'data-[hover=true]:bg-inherit transition-all duration-200 data-[hover=true]:transition-all data-[hover=true]:duration-200',
-              }}>
-              <DropdownItem
-                href='/services/web-development'
-                startContent={
-                  <div className='group rounded-md p-1 transition-all duration-200 group-hover:shadow'>
-                    <Laptop />
-                  </div>
-                }
-                key='web_development'
-                description={t('services.webDevelopment.description')}>
-                {t('services.webDevelopment.title')}
-              </DropdownItem>
-              <DropdownItem
-                href='/services/mobile-development'
-                startContent={
-                  <div className='group rounded-md p-1 transition-all duration-200 group-hover:shadow'>
-                    <Tablet />
-                  </div>
-                }
-                key='mobile_development'
-                description={t('services.mobileDevelopment.description')}>
-                {t('services.mobileDevelopment.title')}
-              </DropdownItem>
-              <DropdownItem
-                href='/services/uiux-design'
-                startContent={
-                  <div className='group rounded-md p-1 transition-all duration-200 group-hover:shadow'>
-                    <PenTool />
-                  </div>
-                }
-                key='uiux_design'
-                description={t('services.uiuxDesign.description')}>
-                {t('services.uiuxDesign.title')}
-              </DropdownItem>
-              <DropdownItem
-                href='/services/uiux-design'
-                startContent={
-                  <div className='group rounded-md p-1 transition-all duration-200 group-hover:shadow'>
-                    <Compass />
-                  </div>
-                }
-                key='consulting'
-                description={t('services.uiuxDesign.description')}>
-                Consulting
-              </DropdownItem>
-            </DropdownSection>
-          </DropdownMenu>
-        </Dropdown>
-        <NavbarItem>
-          <Button
-            disableRipple
-            radius='lg'
-            variant='light'
-            href='/about-us'
-            className='font-semibold'
-            as={Link}>
-            {t('aboutUs')}
-          </Button>
-        </NavbarItem>
+        {navItems.map((navItem, index) => {
+          return navItem.href ?
+              <NavbarItem key={index}>
+                <Button
+                  disableRipple
+                  radius='lg'
+                  variant='light'
+                  className='font-semibold'
+                  href={navItem.href}
+                  as={Link}>
+                  {navItem.label}
+                </Button>
+              </NavbarItem>
+            : <Dropdown
+                key={index}
+                showArrow
+                shouldBlockScroll={false}
+                onOpenChange={setIsDropdownOpen}>
+                <NavbarItem>
+                  <DropdownTrigger>
+                    <Button
+                      disableRipple
+                      radius='lg'
+                      variant='light'
+                      className='font-semibold'
+                      endContent={
+                        isDropdownOpen ?
+                          <ChevronUp className='mt-0.5 size-4' />
+                        : <ChevronDown className='mt-0.5 size-4' />
+                      }>
+                      {navItem.label}
+                    </Button>
+                  </DropdownTrigger>
+                </NavbarItem>
+                <DropdownMenu classNames={{ list: 'p-1' }} aria-label={navItem.aria}>
+                  <DropdownSection
+                    classNames={{
+                      group: 'space-y-2',
+                      base: 'data-[hover=true]:bg-inherit transition-all duration-200 data-[hover=true]:transition-all data-[hover=true]:duration-200',
+                    }}>
+                    <>
+                      {navItem.subItems.map((subItem) => {
+                        return (
+                          <DropdownItem
+                            href={subItem.href as RouterConfig['href']}
+                            startContent={
+                              <div className='group rounded-md p-1 transition-all duration-200 group-hover:shadow'>
+                                {subItem.icon}
+                              </div>
+                            }
+                            key={subItem.label}
+                            description={subItem.description}>
+                            {subItem.label}
+                          </DropdownItem>
+                        );
+                      })}
+                    </>
+                  </DropdownSection>
+                </DropdownMenu>
+              </Dropdown>;
+        })}
       </NavbarContent>
 
       <NavbarContent justify='end'>
@@ -200,38 +213,39 @@ export function Header() {
       </NavbarContent>
 
       <NavbarMenu>
-        <NavbarMenuItem>
-          <Link className='w-full' href='/projects' size='lg'>
-            {t('projects')}
-          </Link>
-        </NavbarMenuItem>
-        <NavbarMenuItem>
-          <Accordion className='px-0'>
-            <AccordionItem
-              classNames={{ trigger: 'py-0', title: 'text-large' }}
-              title={t('services.title')}>
-              <div className='ml-2 flex w-full flex-col gap-2'>
-                <Link href='/services/web-development' key='web_development'>
-                  {t('services.webDevelopment.title')}
-                </Link>
-                <Link href='/services/mobile-development' key='mobile_development'>
-                  {t('services.mobileDevelopment.title')}
-                </Link>
-                <Link href='/services/uiux-design' key='uiux_design'>
-                  {t('services.uiuxDesign.title')}
-                </Link>
-                <Link href='/services/uiux-design' key='consulting'>
-                  Consulting
-                </Link>
-              </div>
-            </AccordionItem>
-          </Accordion>
-        </NavbarMenuItem>
-        <NavbarMenuItem>
-          <Link className='w-full' href='/about-us' size='lg'>
-            {t('aboutUs')}
-          </Link>
-        </NavbarMenuItem>
+        <>
+          {navItems.map((navItem, index) => {
+            return (
+              <NavbarMenuItem key={index}>
+                {navItem.href ?
+                  <Link
+                    className='w-full'
+                    href={navItem.href as string & RouterConfig['href']}
+                    size='lg'>
+                    {navItem.label}
+                  </Link>
+                : <Accordion className='px-0'>
+                    <AccordionItem
+                      classNames={{ trigger: 'py-0', title: 'text-large' }}
+                      title={navItem.label}>
+                      <div className='ml-2 flex w-full flex-col gap-2'>
+                        {navItem.subItems.map((subItem) => {
+                          return (
+                            <Link
+                              href={subItem.href as string & RouterConfig['href']}
+                              key={subItem.label}>
+                              {subItem.label}
+                            </Link>
+                          );
+                        })}
+                      </div>
+                    </AccordionItem>
+                  </Accordion>
+                }
+              </NavbarMenuItem>
+            );
+          })}
+        </>
       </NavbarMenu>
     </Navbar>
   );

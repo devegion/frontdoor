@@ -1,6 +1,124 @@
 {
   "HomePage": {
-    "welcome": "Buna Lume!"
+    "hero": {
+      "header": {
+        "part1": "Web & Mobil",
+        "part2": "cap-coada"
+      },
+      "description": "Solutii complete web si mobile, de la strategie initiala pana la livrare finala. Combinam dezvoltare de ultima generatie, design atent si consultanta experta pentru a da viata produselor digitale. Construite pe o fundatie de impartasire a cunostintelor, am pregatit sute de dezvoltatori care alimenteaza inovatia.",
+      "stats": {
+        "experience": "Ani de Experienta",
+        "projects": "Proiecte Realizate",
+        "clients": "Clienti Multumiti"
+      }
+    },
+    "services": {
+      "badge": "Serviciile Noastre",
+      "title": "Ce facem noi...",
+      "description": "Servicii web, mobile, UI/UX si consultanta pentru afaceri moderne. Oferim platforme web avansate, aplicatii mobile, design de experienta a utilizatorului si ghidare strategica, pentru dezvoltarea afacerii tale. Acoperim tot traseul digital, de la idee pana la lansare.",
+      "webDevelopment": {
+        "title": "Dezvoltare Web",
+        "description": "",
+        "strongPoint1": "Incarcare rapida si optimizare mobil",
+        "strongPoint2": "Optimizat SEO pentru vizibilitate",
+        "strongPoint3": "Platforme sigure si de incredere",
+        "strongPoint4": "Sisteme usor de administrat",
+        "strongPoint5": "Site-uri personalizate pentru nevoile tale",
+        "strongPoint6": "Solutii scalabile care cresc odata cu tine"
+      },
+      "mobileDevelopment": {
+        "title": "Dezvoltare Mobile",
+        "description": "",
+        "strongPoint1": "Aplicatii native iOS si Android",
+        "strongPoint2": "Solutii cross-platform",
+        "strongPoint3": "Performanta fluida si animatii",
+        "strongPoint4": "Functionare offline"
+      },
+      "uiuxDesign": {
+        "title": "UI/UX Design",
+        "description": "",
+        "strongPoint1": "Interfete frumoase pe care utilizatorii le adora",
+        "strongPoint2": "Navigare intuitiva si usoara",
+        "strongPoint3": "Design adaptat pentru mobil",
+        "strongPoint4": "Decizii bazate pe date reale"
+      },
+      "consulting": {
+        "title": "Consultanta",
+        "description": "",
+        "strongPoint1": "Planificare strategica digitala",
+        "strongPoint2": "Recomandari tehnologice",
+        "strongPoint3": "Optimizarea proceselor",
+        "strongPoint4": "Strategii de crestere pe termen lung"
+      }
+    },
+    "projects": {
+      "badge": "Proiectele Noastre",
+      "title": "O parte din munca noastra...",
+      "description": "Exploreaza solutiile web si mobile pe care le-am creat pentru clienti din diverse industrii. Fiecare proiect reflecta dedicarea noastra pentru excelenta si inovatie.",
+      "carCareRo": {
+        "title": "CarCareRo",
+        "description": "Aplicatie mobila care ajuta soferii sa gestioneze politele de asigurare si programul de mentenanta al masinii. Urmareste istoricul serviciilor, seteaza reminder-uri si pastreaza toate documentele vehiculului intr-un singur loc."
+      },
+      "restaurantTm": {
+        "title": "RestaurantTM",
+        "description": "Platforma mobila multi-tenant pentru zona de restaurante din Timisoara. Descopera restaurante, citeste review-uri autentice, exploreaza locatii si gaseste-ti urmatoarea masa preferata in oras."
+      },
+      "paulPhoto": {
+        "title": "PaulPhoto",
+        "description": "Platforma web de portofoliu pentru un fotograf. Prezinta colectii fotografice impresionante cu layout-uri flexibile, gestionare usoara a continutului si o prezentare profesionala care lasa munca sa vorbeasca de la sine."
+      },
+      "vaudior": {
+        "title": "VaudioR",
+        "description": "Aplicatie mobila VR inovatoare care transforma cartile audio in experiente captivante. Peisaje si scene generate cu AI aduc povestile la viata, creand medii vizuale care se potrivesc cu narativul pe care il asculti."
+      }
+    },
+    "people": {
+      "badge": "Oameni",
+      "title": "Fa cunostinta cu echia",
+      "description": "Cunoaste echipa noastra de tineri inovatori. Aducem idei proaspete, pasiune pentru tehnologie si dorinta de a construi solutii care fac diferenta. Impreuna, transformam provocarile in oportunitati."
+    },
+    "reviews": {
+      "badge": "Feedback",
+      "title1": "De ce clientii",
+      "title2": "Iubesc",
+      "title3": "Devegion",
+      "description": "Afla ce spun clientii nostri. Proiecte reale, rezultate reale, feedback real de la afaceri pe care le-am ajutat sa creasca."
+    },
+    "faq": {
+      "title": "Intrebari Frecvente",
+      "description": "Ai intrebari? Gaseste raspunsuri rapide la cele mai frecvente intrebari despre serviciile noastre, procesul de lucru, preturi si termene.",
+      "q1": {
+        "title": "Cat dureaza sa construim o aplicatie web sau mobila?",
+        "answer": "Durata proiectelor variaza in functie de complexitate si cerinte. Un site simplu dureaza 4-6 saptamani, in timp ce o aplicatie web sau mobila personalizata necesita de obicei 3-6 luni. Oferim un timeline detaliat dupa ce intelegem nevoile tale specifice."
+      },
+      "q2": {
+        "title": "Ce servicii oferiti?",
+        "answer": "Oferim dezvoltare web completa, dezvoltare aplicatii mobile (iOS si Android), design UI/UX si consultanta strategica. De la concept la lansare, gestionam fiecare aspect al produsului tau digital, inclusiv suport si mentenanta continua."
+      },
+      "q3": {
+        "title": "Cat costa un proiect de software personalizat?",
+        "answer": "Costurile depind de scopul proiectului, functionalitati si complexitate. Oferim preturi transparente si cote detaliate dupa ce discutam cerintele tale. Contacteaza-ne pentru o consultatie gratuita si o estimare personalizata pentru proiectul tau."
+      },
+      "q4": {
+        "title": "Oferiti suport dupa lansare?",
+        "answer": "Da! Oferim mentenanta continua, actualizari, rezolvarea bug-urilor si suport tehnic dupa ce proiectul tau este lansat. Suntem dedicati sa ne asiguram ca produsul tau digital continua sa functioneze optim si sa creasca odata cu nevoile afacerii tale."
+      },
+      "q5": {
+        "title": "Cu ce tehnologii lucrati?",
+        "answer": "Folosim tehnologii moderne si dovedite, inclusiv React, Node.js, React Native si platforme cloud precum AWS. Stiva noastra tehnologica este aleasa pe baza cerintelor specifice ale proiectului tau pentru a asigura scalabilitate, securitate si performanta optima."
+      },
+      "q6": {
+        "title": "Cine detine codul si proprietatea intelectuala?",
+        "answer": "Tu detii totul. Odata ce proiectul este finalizat, tot codul sursa, design-urile, documentatia si drepturile de proprietate intelectuala sunt transferate catre tine. Credem in transparenta completa si proprietatea clientului."
+      }
+    },
+
+    "startProject": "Incepe un Proiect",
+    "viewProjects": "Vezi toate Proiectele",
+    "viewWork": "Vizualizeaza-ne munca",
+    "discover": "Descopera",
+    "viewDetails": "Vezi Detalii",
+    "fullStory": "Citeste toata povestea"
   },
   "AboutPage": {
     "welcome": "Salut din Despre!",
@@ -26,6 +144,10 @@
       "uiuxDesign": {
         "title": "UI/UX Design",
         "description": "Text here"
+      },
+      "consulting": {
+        "title": "Consultanta",
+        "description": "Text here"
       }
     },
     "projects": "Proiecte",
@@ -34,6 +156,16 @@
     "callToAction": "Contacteaza-ne"
   },
   "Footer": {
+    "tagline": "Construim cu",
+    "copyright": "©2025 Devegion. Toate drepturile rezervate.",
+    "privacyPolicy": "Politica de Confidentialitate",
+    "quickAccess": {
+      "title": "Acces Rapid",
+      "home": "Acasa",
+      "projects": "Proiecte",
+      "aboutUs": "Despre Noi",
+      "contactUs": "Contacteaza-ne"
+    },
     "services": {
       "title": "Servicii",
       "webDevelopment": {
@@ -44,11 +176,13 @@
       },
       "uiuxDesign": {
         "title": "UI/UX Design"
+      },
+      "consulting": {
+        "title": "Consultanta"
       }
     },
-    "projects": "Proiecte",
-    "aboutUs": "Despre Noi",
-    "pricing": "Preturi",
-    "FAQ": "Intrebari Frecvente"
+    "projects": {
+      "title": "Proiecte"
+    }
   }
 }

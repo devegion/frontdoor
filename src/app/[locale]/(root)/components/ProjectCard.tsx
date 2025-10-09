@@ -4,6 +4,7 @@ import { Chip } from '@heroui/chip';
 import { Link } from '@heroui/link';
 import { Divider } from '@heroui/divider';
 import { SquareArrowOutUpRight } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 
 export function ProjectCard({
   title,
@@ -20,6 +21,8 @@ export function ProjectCard({
   projectLink: string;
   badges: string[];
 }) {
+  const t = useTranslations('HomePage');
+
   return (
     <div className='hover:bg-default-100 flex flex-col gap-4 rounded-3xl p-4 shadow transition-all duration-300 hover:shadow-lg'>
       <Image
@@ -42,7 +45,7 @@ export function ProjectCard({
         <Divider orientation='horizontal' />
         <div className='flex w-full items-center justify-between gap-2'>
           <Button as={Link} className='grow' radius='lg' variant='bordered' href={detailsLink}>
-            View Details
+            {t('viewDetails')}
           </Button>
           <Button as={Link} radius='lg' variant='light' isExternal href={projectLink} isIconOnly>
             <SquareArrowOutUpRight className='size-5' />
