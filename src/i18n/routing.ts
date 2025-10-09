@@ -22,6 +22,9 @@ export const routing = defineRouting({
     '/services/uiux-design': {
       ro: '/servicii/uiux-design',
     },
+    '/contact-us': {
+      ro: '/contact',
+    },
   },
 
   localeDetection: false,

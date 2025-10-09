@@ -2,6 +2,7 @@
 
 import { HeroUIProvider } from '@heroui/react';
 import { useRouter } from '@/i18n/navigation';
+import { ToastProvider } from '@heroui/toast';
 
 declare module '@react-types/shared' {
   interface RouterConfig {
@@ -12,5 +13,10 @@ declare module '@react-types/shared' {
 export function HeroProvider({ children }: { children: React.ReactNode }) {
   const router = useRouter();
 
-  return <HeroUIProvider navigate={router.push}>{children}</HeroUIProvider>;
+  return (
+    <HeroUIProvider navigate={router.push}>
+      <ToastProvider placement='top-center' toastOffset={60} />
+      {children}
+    </HeroUIProvider>
+  );
 }

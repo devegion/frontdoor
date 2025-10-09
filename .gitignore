@@ -42,3 +42,5 @@ next-env.d.ts
 
 # i18n
 messages/*.d.json.ts
+
+/src/generated/prisma

@@ -1,7 +1,7 @@
 import Image, { StaticImageData } from 'next/image';
 import { Button } from '@heroui/button';
 import { Chip } from '@heroui/chip';
-import { Link, LinkProps } from '@heroui/link';
+import { Link } from '@heroui/link';
 import { Divider } from '@heroui/divider';
 import { SquareArrowOutUpRight } from 'lucide-react';
 

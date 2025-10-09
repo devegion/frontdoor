@@ -1,4 +1,4 @@
-import { CircleQuestionMark, Laptop, Tablet, PenTool, Compass } from 'lucide-react';
+import { CircleQuestionMark, Laptop, Tablet, PenTool, Compass, ArrowRight } from 'lucide-react';
 
 import { hasLocale } from 'next-intl';
 import { routing } from '@/i18n/routing';
@@ -25,6 +25,7 @@ import { Link } from '@heroui/link';
 import { ProjectCard, SolutionCard, ReviewCard } from '@/app/[locale]/(root)/components';
 
 import { DavidImg, DevegionFrameImg, RestaurantmFrameImg, RestaurantmFrameImg2 } from '@/assets';
+import { Stats } from '@/app/[locale]/(root)/components/Stats';
 
 const people = [
   {
@@ -54,12 +55,12 @@ export default async function HomePage({ params }: PageProps<'/[locale]'>) {
   }
   setRequestLocale(locale);
 
-  const t = await getTranslations('HomePage');
+  // const t = await getTranslations('HomePage');
 
   return (
-    <div className='space-y-20 xl:space-y-32'>
-      <Section className='flex min-h-[calc(100vh_-_80px)] items-center'>
-        <div className='flex w-full grow flex-col items-center justify-center'>
+    <div className='space-y-8 xl:space-y-16'>
+      <Section className='flex min-h-[calc(100vh_-_80px)] flex-col items-center sm:justify-center'>
+        <div className='flex w-full flex-col justify-center'>
           <div className='mt-20 flex flex-col items-center space-y-8 pb-[calc(80px_+_10vh)]'>
             <div className='flex flex-col items-center sm:gap-3'>
               <h1 className='font-headline text-center text-3xl font-bold sm:text-5xl xl:text-6xl'>
@@ -69,18 +70,26 @@ export default async function HomePage({ params }: PageProps<'/[locale]'>) {
                 start-to-end
               </span>
             </div>
-            <p className='text-default-700 max-w-lg text-center'>
+            <p className='text-default-700 max-w-2xl text-center'>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam architecto sapiente
               odit alias, nemo fuga placeat et amet fugit itaque dicta rerum, officia asperiores
               vitae?
             </p>
-            <Button as={Link} href='/' variant='faded' size='lg' color='primary' radius='lg'>
-              Start a project
-            </Button>
+            <div className='flex flex-col items-center justify-center gap-5 sm:flex-row'>
+              <Button as={Link} href='/' size='lg' color='primary' radius='lg'>
+                Start a project <ArrowRight className='size-[1em]' />
+              </Button>
+              <Button as={Link} href='/' variant='faded' size='lg' radius='lg'>
+                View our work
+              </Button>
+            </div>
           </div>
         </div>
+        <div className='flex w-full items-center justify-center'>
+          <Stats />
+        </div>
       </Section>
-      <div className='mb-32 space-y-32 xl:mb-44 xl:space-y-44 2xl:mb-64 2xl:space-y-64'>
+      <div className='space-y-32 xl:space-y-44 2xl:space-y-64'>
         <Section>
           <div className='flex w-full flex-col items-center gap-16'>
             <div className='flex flex-col items-center gap-8'>

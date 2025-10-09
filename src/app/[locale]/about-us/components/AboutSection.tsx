@@ -23,6 +23,7 @@ export function AboutSection({
         <div className='mt-12 flex flex-wrap justify-center gap-6'>
           {images.map((img, index) => (
             <Image
+              key={index}
               src={img}
               className='h-auto w-full max-w-xs rounded-lg shadow-lg md:max-w-sm'
               alt={''}
