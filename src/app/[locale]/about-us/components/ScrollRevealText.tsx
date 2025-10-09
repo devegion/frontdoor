@@ -1,11 +1,15 @@
+'use client';
+
+import { useTranslations } from 'next-intl';
 import { useEffect, useRef, useState } from 'react';
 
 export function ScrollRevealText() {
   const containerRef = useRef<HTMLDivElement>(null);
   const [letters, setLetters] = useState<Array<{ char: string; progress: number }>>([]);
 
-  const text =
-    "Living on the edge where academia meets industry, our story dates back to 2020 when our founder, Damian, created a place of growth for those talents that wanted to achieve more. Conducting workshops, tech talks and social networking events, he kept an eye on vocal individuals with high standards focused on knowledge intake and skill development. Projects were made, applications created, foundations built. Now, we're opening our gates to a wide audience of entrepreneurs that wish to consolidate their tech part of the business - to you.";
+  const t = useTranslations('AboutPage');
+
+  const text = t('story.introduction');
 
   useEffect(() => {
     setLetters(text.split('').map((char) => ({ char, progress: 0 })));

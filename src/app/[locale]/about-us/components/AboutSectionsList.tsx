@@ -1,3 +1,4 @@
+'use client';
 import { AboutSection } from './AboutSection';
 
 export function AboutSectionsList() {

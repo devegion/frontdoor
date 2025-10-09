@@ -3,7 +3,11 @@
     "welcome": "Buna Lume!"
   },
   "AboutPage": {
-    "welcome": "Salut din Despre!"
+    "welcome": "Salut din Despre!",
+    "title": "Povestea Noastra",
+    "story": {
+      "introduction": "Traind la granita dintre mediul academic si industrie, povestea noastra isi are inceputurile in 2020, cand fondatorul nostru, Damian, a creat un loc de crestere pentru acele talente care isi doreau sa realizeze mai mult. Organizand workshopuri, prezentari tehnice si evenimente de socializare, el a urmarit indeaproape persoanele vocale, cu standarde inalte, concentrate pe acumularea de cunostinte si dezvoltarea abilitatilor. Proiecte au fost realizate, aplicatii create, fundatii construite. Acum, ne deschidem portile catre un public larg de antreprenori care doresc sa isi consolideze partea tehnica a afacerii lor – catre tine."
+    }
   },
   "Header": {
     "openNavbarMenu": "Deschide meniul",

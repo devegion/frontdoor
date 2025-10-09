@@ -1,3 +1,5 @@
+'use client';
+
 import { cn } from '@/shared/utils/cn';
 import { ReactNode } from 'react';
 import { ClassNameValue } from 'tailwind-merge';
