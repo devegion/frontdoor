@@ -5,11 +5,13 @@ import GabImg from '@/assets/gab.jpg';
 import CristiImg from '@/assets/cristi.jpg';
 import PopImg from '@/assets/pop.jpg';
 import PoeImg from '@/assets/poe.jpg';
-import DevegionFrameImg from '@/assets/devegion-frame.png';
-import RestaurantmFrameImg from '@/assets/restaurantm-frame.png';
-import RestaurantmFrameImg2 from '@/assets/restaurantm-frame-2.png';
 import TeamImage1 from '@/assets/team1.jpg';
 import TeamImage2 from '@/assets/team2.jpg';
+
+import RTMThumbnail from '@/assets/rtm_thumbnail.png';
+import CCRThumbnail from '@/assets/ccr_thumbnail.png';
+import PCThumbnail from '@/assets/pc_thumbnail.png';
+import VadrThumbnail from '@/assets/vadr_thumbnail.png';
 
 export {
   DavidImg,
@@ -18,10 +20,11 @@ export {
   GabImg,
   PopImg,
   PoeImg,
+  RTMThumbnail,
+  CCRThumbnail,
+  PCThumbnail,
+  VadrThumbnail,
   CristiImg,
-  DevegionFrameImg,
-  RestaurantmFrameImg,
-  RestaurantmFrameImg2,
   TeamImage1,
   TeamImage2,
 };

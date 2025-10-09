@@ -27,9 +27,7 @@ import {
   PopImg,
   PoeImg,
   CristiImg,
-  DevegionFrameImg,
-  RestaurantmFrameImg,
-  RestaurantmFrameImg2,
+  RTMThumbnail, CCRThumbnail, PCThumbnail, VadrThumbnail
 } from '@/assets';
 import { Stats } from '@/app/[locale]/(root)/components/Stats';
 
@@ -211,7 +209,7 @@ export default async function HomePage({ params }: PageProps<'/[locale]'>) {
               <ProjectCard
                 title={t('projects.restaurantTm.title')}
                 description={t('projects.restaurantTm.description')}
-                image={RestaurantmFrameImg}
+                image={RTMThumbnail}
                 projectLink='/projects'
                 detailsLink='/projects'
                 badges={[]}
@@ -219,7 +217,7 @@ export default async function HomePage({ params }: PageProps<'/[locale]'>) {
               <ProjectCard
                 title={t('projects.carCareRo.title')}
                 description={t('projects.carCareRo.description')}
-                image={DevegionFrameImg}
+                image={CCRThumbnail}
                 projectLink='/projects'
                 detailsLink='/projects'
                 badges={[]}
@@ -227,7 +225,7 @@ export default async function HomePage({ params }: PageProps<'/[locale]'>) {
               <ProjectCard
                 title={t('projects.paulPhoto.title')}
                 description={t('projects.paulPhoto.description')}
-                image={RestaurantmFrameImg2}
+                image={PCThumbnail}
                 projectLink='/projects'
                 detailsLink='/projects'
                 badges={[]}
@@ -235,7 +233,7 @@ export default async function HomePage({ params }: PageProps<'/[locale]'>) {
               <ProjectCard
                 title={t('projects.vaudior.title')}
                 description={t('projects.vaudior.description')}
-                image={RestaurantmFrameImg2}
+                image={VadrThumbnail}
                 projectLink='/projects'
                 detailsLink='/projects'
                 badges={[]}
