@@ -56,25 +56,25 @@ export function Header() {
       subItems: [
         {
           label: t('services.webDevelopment.title'),
-          description: t('services.webDevelopment.description'),
+          // description: t('services.webDevelopment.description'),
           href: '/services/web-development',
           icon: <Laptop />,
         },
         {
           label: t('services.mobileDevelopment.title'),
-          description: t('services.mobileDevelopment.description'),
+          // description: t('services.mobileDevelopment.description'),
           href: '/services/mobile-development',
           icon: <Tablet />,
         },
         {
           label: t('services.uiuxDesign.title'),
-          description: t('services.uiuxDesign.description'),
+          // description: t('services.uiuxDesign.description'),
           href: '/services/uiux-design',
           icon: <PenTool />,
         },
         {
           label: t('services.consulting.title'),
-          description: t('services.consulting.description'),
+          // description: t('services.consulting.description'),
           href: '/services/consulting',
           icon: <Compass />,
         },
@@ -170,8 +170,7 @@ export function Header() {
                                 {subItem.icon}
                               </div>
                             }
-                            key={subItem.label}
-                            description={subItem.description}>
+                            key={subItem.label}>
                             {subItem.label}
                           </DropdownItem>
                         );

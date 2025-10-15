@@ -25,19 +25,19 @@ export default async function contactUsPage({ params }: PageProps<'/[locale]/con
             <div className='flex max-h-min flex-col justify-between gap-2'>
               <SectionHeading className='text-primary xl:text-start'>Contact us</SectionHeading>
               <SectionDescription className='xl:text-start'>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit aut eligendi eos quidem
-                magni enim voluptate soluta mollitia quam omnis?
+                We’d love to hear from you! Whether you have a question, feedback, or need
+                assistance, our team is here to help.
               </SectionDescription>
             </div>
             <div className='hidden max-h-min w-full flex-col justify-end gap-8 xl:flex'>
               <ContactOption
                 title='Email Us'
-                content='support@devegion.ro'
+                content='support@devegion.com'
                 icon={<Mail className='size-8' />}
               />
               <ContactOption
                 title='Call Us'
-                content='+40 771 607 097'
+                content='+40 733 051 566'
                 icon={<Phone className='size-8' />}
               />
             </div>
@@ -46,12 +46,12 @@ export default async function contactUsPage({ params }: PageProps<'/[locale]/con
           <div className='flex max-h-min w-full flex-col justify-end gap-8 xl:hidden'>
             <ContactOption
               title='Email Us'
-              content='support@devegion.ro'
+              content='support@devegion.com'
               icon={<Mail className='size-8' />}
             />
             <ContactOption
               title='Call Us'
-              content='+40 771 607 097'
+              content='+40 733 051 566'
               icon={<Phone className='size-8' />}
             />
           </div>
