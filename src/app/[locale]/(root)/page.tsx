@@ -27,7 +27,10 @@ import {
   PopImg,
   PoeImg,
   CristiImg,
-  RTMThumbnail, CCRThumbnail, PCThumbnail, VadrThumbnail
+  RTMThumbnail,
+  CCRThumbnail,
+  PCThumbnail,
+  VadrThumbnail,
 } from '@/assets';
 import { Stats } from '@/app/[locale]/(root)/components/Stats';
 
@@ -87,9 +90,11 @@ export default async function HomePage({ params }: PageProps<'/[locale]'>) {
 
   return (
     <div className='mb-32 space-y-8 xl:mb-44 xl:space-y-16 2xl:mb-64'>
-      <Section className='flex min-h-[calc(100vh_-_80px)] flex-col items-center sm:justify-center'>
+      <Section
+        isAnimated={false}
+        className='flex min-h-[calc(100vh_-_80px)] flex-col items-center sm:justify-center'>
         <div className='flex w-full flex-col justify-center'>
-          <div className='mt-20 flex flex-col items-center space-y-8 pb-[calc(80px_+_10vh)]'>
+          <div className='mt-20 flex flex-col items-center space-y-8 pb-[calc(80px_+_10vh)] xl:mt-10 2xl:mt-0'>
             <div className='flex flex-col items-center sm:gap-3'>
               <h1 className='font-headline text-center text-3xl font-bold sm:text-5xl xl:text-6xl'>
                 {t('hero.header.part1')}
@@ -100,16 +105,16 @@ export default async function HomePage({ params }: PageProps<'/[locale]'>) {
             </div>
             <p className='text-default-700 max-w-2xl text-center'>{t('hero.description')}</p>
             <div className='flex flex-col items-center justify-center gap-5 sm:flex-row'>
-              <Button as={Link} href='/' size='lg' color='primary' radius='lg'>
+              <Button as={Link} href='/contact-us' size='lg' color='primary' radius='lg'>
                 {t('startProject')} <ArrowRight className='size-[1em]' />
               </Button>
-              <Button as={Link} href='/' variant='faded' size='lg' radius='lg'>
+              <Button as={Link} href='/#projects' variant='faded' size='lg' radius='lg'>
                 {t('viewWork')}
               </Button>
             </div>
           </div>
         </div>
-        <div className='mb-20 flex w-full items-center justify-center sm:mb-0'>
+        <div className='mb-12 flex w-full items-center justify-center'>
           <Stats />
         </div>
       </Section>
@@ -183,7 +188,40 @@ export default async function HomePage({ params }: PageProps<'/[locale]'>) {
           </div>
         </Section>
         <Section>
-          <div className='flex w-full flex-col items-center gap-8 lg:items-start lg:gap-16'>
+          <div className='flex w-full flex-col items-center gap-8'>
+            <Chip size='md' variant='bordered' className='py-4 shadow' radius='full'>
+              {t('people.badge')}
+            </Chip>
+            <SectionHeading>{t('people.title')}</SectionHeading>
+            <div className='flex flex-row items-center justify-center'>
+              <AnimatedTooltip items={people} />
+            </div>
+            <SectionDescription>{t('people.description')}</SectionDescription>
+            <div className='flex flex-col items-center justify-center gap-5 sm:flex-row'>
+              <Button
+                as={Link}
+                href='/about-us'
+                variant='ghost'
+                size='lg'
+                color='primary'
+                radius='lg'>
+                {t('fullStory')}
+              </Button>
+              <Button
+                as={Link}
+                href='/contact-us'
+                variant='flat'
+                color='primary'
+                size='lg'
+                radius='lg'>
+                {t('startProject')}
+              </Button>
+            </div>
+          </div>
+        </Section>
+        <Section>
+          <div className='relative flex w-full flex-col items-center gap-8 lg:items-start lg:gap-16'>
+            <span id='projects' className='invisible absolute -top-10' />
             <Chip size='md' variant='bordered' className='py-4 shadow lg:hidden' radius='full'>
               {t('projects.badge')}
             </Chip>
@@ -239,27 +277,6 @@ export default async function HomePage({ params }: PageProps<'/[locale]'>) {
                 badges={[]}
               />
             </div>
-          </div>
-        </Section>
-        <Section>
-          <div className='flex w-full flex-col items-center gap-8'>
-            <Chip size='md' variant='bordered' className='py-4 shadow' radius='full'>
-              {t('people.badge')}
-            </Chip>
-            <SectionHeading>{t('people.title')}</SectionHeading>
-            <div className='flex flex-row items-center justify-center'>
-              <AnimatedTooltip items={people} />
-            </div>
-            <SectionDescription>{t('people.description')}</SectionDescription>
-            <Button
-              as={Link}
-              href='/about-us'
-              variant='ghost'
-              size='lg'
-              color='primary'
-              radius='lg'>
-              {t('fullStory')}
-            </Button>
           </div>
         </Section>
         {/* <Section>

@@ -45,3 +45,4 @@ messages/*.d.json.ts
 
 # ide
 /.idea
+/.vscode
