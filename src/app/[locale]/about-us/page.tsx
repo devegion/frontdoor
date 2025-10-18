@@ -31,7 +31,7 @@ export default async function AboutPage({ params }: PageProps<'/[locale]'>) {
   const t = await getTranslations('AboutPage');
 
   return (
-    <div className='mb-20 xl:mb-28'>
+    <div className='mb-32 xl:mb-44 2xl:mb-64'>
       <Section className='mt-20 flex min-h-[50vh] flex-col items-center justify-center space-y-20'>
         <h1 className='rounded-2xl p-4 text-center text-5xl leading-tight font-extrabold sm:text-5xl md:text-6xl lg:text-7xl'>
           {t('title')}

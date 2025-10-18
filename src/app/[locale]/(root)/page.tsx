@@ -53,10 +53,10 @@ export default async function HomePage({ params }: PageProps<'/[locale]'>) {
           <div className='mt-20 flex flex-col items-center space-y-8 pb-[calc(80px_+_10vh)] xl:mt-10 2xl:mt-0'>
             <div className='flex flex-col items-center sm:gap-3'>
               <h1 className='font-headline text-center text-3xl font-bold sm:text-5xl xl:text-6xl'>
-                {t('hero.header.part1')}
+                {t('hero.title.part1')}
               </h1>
               <span className='sm:bg-primary-100 text-2xl font-bold text-nowrap sm:w-min sm:rounded-2xl sm:p-4 sm:text-4xl xl:text-5xl'>
-                {t('hero.header.part2')}
+                {t('hero.title.part2')}
               </span>
             </div>
             <p className='text-default-700 max-w-2xl text-center'>{t('hero.description')}</p>

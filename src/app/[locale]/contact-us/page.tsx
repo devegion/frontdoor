@@ -5,10 +5,10 @@ import { hasLocale } from 'next-intl';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { Metadata } from 'next';
-import { ReactNode } from 'react';
 
-import { Section, SectionDescription, SectionHeading, ContactForm } from '@/shared/components/ui';
-import { Chip } from '@heroui/chip';
+import { Section, SectionDescription, SectionHeading } from '@/shared/components/ui';
+import { ContactForm } from './components/ContactForm';
+import { ContactOption } from './components';
 
 export async function generateMetadata({
   params,
@@ -32,26 +32,27 @@ export default async function contactUsPage({ params }: PageProps<'/[locale]/con
   }
   setRequestLocale(locale);
 
+  const t = await getTranslations('ContactUsPage');
+
   return (
-    <Section className='flex min-h-[calc(100vh_-_160px)] items-center justify-center'>
-      <div className='flex flex-col items-center gap-16 pt-20'>
+    <Section
+      isAnimated={false}
+      className='mb-32 flex min-h-[calc(100vh_-_80px)] items-center justify-center xl:mb-44 2xl:mb-64'>
+      <div className='flex flex-col items-center gap-16 pt-20 xl:pt-10 2xl:pt-0'>
         <div className='grid w-full grid-cols-1 gap-16 xl:grid-cols-11'>
           <div className='flex flex-col items-center justify-end gap-8 xl:col-span-5'>
             <div className='flex max-h-min flex-col justify-between gap-2'>
-              <SectionHeading className='text-primary xl:text-start'>Contact us</SectionHeading>
-              <SectionDescription className='xl:text-start'>
-                We’d love to hear from you! Whether you have a question, feedback, or need
-                assistance, our team is here to help.
-              </SectionDescription>
+              <SectionHeading className='text-primary xl:text-start'>{t('title')}</SectionHeading>
+              <SectionDescription className='xl:text-start'>{t('description')}</SectionDescription>
             </div>
             <div className='hidden max-h-min w-full flex-col justify-end gap-8 xl:flex'>
               <ContactOption
-                title='Email Us'
+                title={t('contactOptions.email')}
                 content='support@devegion.com'
                 icon={<Mail className='size-8' />}
               />
               <ContactOption
-                title='Call Us'
+                title={t('contactOptions.phone')}
                 content='+40 733 051 566'
                 icon={<Phone className='size-8' />}
               />
@@ -73,31 +74,5 @@ export default async function contactUsPage({ params }: PageProps<'/[locale]/con
         </div>
       </div>
     </Section>
-  );
-}
-
-function ContactOption({
-  title,
-  content,
-  icon,
-}: {
-  title: string;
-  content: string;
-  icon: ReactNode;
-}) {
-  return (
-    <div className='border-default-500 shadow-default-400 flex h-full w-full basis-0 items-center gap-8 rounded-2xl border p-4 shadow'>
-      <Chip
-        size='md'
-        radius='lg'
-        variant='bordered'
-        className='flex size-12 max-w-none min-w-auto items-center justify-center'>
-        {icon}
-      </Chip>
-      <div className='flex flex-col'>
-        <h3 className='font-headline font-semibold sm:text-lg xl:text-xl'>{title}</h3>
-        <p className='text-default-700'>{content}</p>
-      </div>
-    </div>
   );
 }

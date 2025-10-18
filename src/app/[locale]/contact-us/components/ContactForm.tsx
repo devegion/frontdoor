@@ -11,6 +11,7 @@ import { ClassNameValue } from 'tailwind-merge';
 import { cn } from '@/shared/utils/cn';
 import z from 'zod';
 import { addToast } from '@heroui/toast';
+import { useTranslations } from 'next-intl';
 
 async function postForm(formData: Record<string, string>) {
   try {
@@ -28,6 +29,7 @@ async function postForm(formData: Record<string, string>) {
     }
     return false;
   } catch (error) {
+    console.log(error);
     return false;
   }
 }
@@ -44,19 +46,18 @@ export function ContactForm({ className }: { className?: ClassNameValue }) {
   const [formData, setFormData] = useState({ ...initialFormState });
   const [isLoading, setIsLoading] = useState(false);
 
-  const nameSchema = z
-    .string()
-    .min(3, 'Name must be at least 3 characters long')
-    .max(50, 'Name must be less than 50 characters');
-  const emailSchema = z.email('Please enter a valid email address');
+  const t = useTranslations('ContactUsPage');
+
+  const nameSchema = z.string().min(3, t('formErrors.name.min')).max(50, t('formErrors.name.max'));
+  const emailSchema = z.email(t('formErrors.email.invalid'));
   const subjectSchema = z
     .string()
-    .min(3, 'Subject must be at least 3 characters long')
-    .max(100, 'Subject must be less than 50 characters');
+    .min(3, t('formErrors.subject.min'))
+    .max(100, t('formErrors.subject.max'));
   const messageSchema = z
     .string()
-    .min(10, 'Message must be at least 10 characters long')
-    .max(1000, 'Message must be less than 1000 characters');
+    .min(10, t('formErrors.message.min'))
+    .max(1000, t('formErrors.message.max'));
 
   async function onSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -66,14 +67,14 @@ export function ContactForm({ className }: { className?: ClassNameValue }) {
     if (success) {
       addToast({
         color: 'success',
-        title: 'Message sent successfully.',
-        description: 'We will come back to you in a short time.',
+        title: t('formToast.success.title'),
+        description: t('formToast.success.description'),
       });
     } else {
       addToast({
         color: 'danger',
-        title: 'Message could not be sent.',
-        description: 'Please try again later.',
+        title: t('formToast.failure.title'),
+        description: t('formToast.failure.description'),
       });
     }
 
@@ -91,7 +92,7 @@ export function ContactForm({ className }: { className?: ClassNameValue }) {
               variant='faded'
               radius='lg'
               name='name'
-              label='Name'
+              label={t('formLabels.name')}
               value={formData.name}
               validate={(value) => {
                 try {
@@ -101,7 +102,7 @@ export function ContactForm({ className }: { className?: ClassNameValue }) {
                   if (error instanceof z.ZodError) {
                     return error.issues[0].message;
                   }
-                  return 'Name is invalid';
+                  return t('formErrors.name.generic');
                 }
               }}
               onValueChange={(value) => setFormData({ ...formData, name: value })}
@@ -111,7 +112,7 @@ export function ContactForm({ className }: { className?: ClassNameValue }) {
               radius='lg'
               name='email'
               type='email'
-              label='Email'
+              label={t('formLabels.email')}
               value={formData.email}
               validate={(value) => {
                 try {
@@ -121,7 +122,7 @@ export function ContactForm({ className }: { className?: ClassNameValue }) {
                   if (error instanceof z.ZodError) {
                     return error.issues[0].message;
                   }
-                  return 'Email is invalid';
+                  return t('formErrors.email.invalid');
                 }
               }}
               onValueChange={(value) => setFormData({ ...formData, email: value })}
@@ -131,7 +132,7 @@ export function ContactForm({ className }: { className?: ClassNameValue }) {
             variant='faded'
             radius='lg'
             name='subject'
-            label='Subject'
+            label={t('formLabels.subject')}
             value={formData.subject}
             validate={(value) => {
               try {
@@ -141,7 +142,7 @@ export function ContactForm({ className }: { className?: ClassNameValue }) {
                 if (error instanceof z.ZodError) {
                   return error.issues[0].message;
                 }
-                return 'Subject is invalid';
+                return t('formErrors.subject.generic');
               }
             }}
             onValueChange={(value) => setFormData({ ...formData, subject: value })}
@@ -150,7 +151,7 @@ export function ContactForm({ className }: { className?: ClassNameValue }) {
             variant='faded'
             radius='lg'
             name='message'
-            label='Message'
+            label={t('formLabels.message')}
             minRows={4}
             maxRows={4}
             value={formData.message}
@@ -162,7 +163,7 @@ export function ContactForm({ className }: { className?: ClassNameValue }) {
                 if (error instanceof z.ZodError) {
                   return error.issues[0].message;
                 }
-                return 'Message is invalid';
+                return t('formErrors.message.generic');
               }
             }}
             onValueChange={(value) => setFormData({ ...formData, message: value })}
@@ -175,7 +176,7 @@ export function ContactForm({ className }: { className?: ClassNameValue }) {
             variant='faded'
             className='w-full'
             type='submit'>
-            Send Message
+            {t('sendMessage')}
           </Button>
         </Form>
       </CardBody>

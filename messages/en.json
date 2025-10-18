@@ -5,7 +5,7 @@
       "description": "Devegion builds custom web and mobile solutions from concept to launch. We are experts in web development, mobile apps, UI/UX design, and software consulting."
     },
     "hero": {
-      "header": {
+      "title": {
         "part1": "Web & Mobile",
         "part2": "start-to-end"
       },
@@ -156,7 +156,50 @@
     "metadata": {
       "title": "Contact Us",
       "description": "Contact Devegion today for custom web and mobile solutions, UI/UX design, and software consulting. Discuss your project with our team via form or phone, here for your vision."
-    }
+    },
+    "title": "Contact Us",
+    "description": "Whether you want to work with our team, have questions, feedback, or need assistance, our teams is here to help.",
+    "contactOptions": {
+      "email": "Email Us",
+      "phone": "Call Us"
+    },
+    "formErrors": {
+      "name": {
+        "min": "Name must be at least 3 characters long",
+        "max": "Name must be less than 50 characters",
+        "generic": "Name is not valid"
+      },
+      "email": {
+        "invalid": "Please enter a valid email address"
+      },
+      "subject": {
+        "min": "Subject must be at least 3 characters long",
+        "max": "Subject must be less than 50 characters",
+        "generic": "Subject is not valid"
+      },
+      "message": {
+        "min": "Message must be at least 10 characters long",
+        "max": "Message must be less than 1000 characters",
+        "generic": "Message is not valid"
+      }
+    },
+    "formToast": {
+      "success": {
+        "title": "Message sent successfully.",
+        "description": "We will come back to you in a short time."
+      },
+      "failure": {
+        "title": "Message could not be sent.",
+        "description": "Please try again later."
+      }
+    },
+    "formLabels": {
+      "name": "Name",
+      "email": "Email",
+      "subject": "Subject",
+      "message": "Message"
+    },
+    "sendMessage": "Send Message"
   },
   "Header": {
     "openNavbarMenu": "Close menu",
