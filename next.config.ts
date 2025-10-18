@@ -3,10 +3,6 @@ import createNextIntlPlugin from 'next-intl/plugin';
 
 const nextConfig: NextConfig = {
   typedRoutes: true,
-  output: 'export',
-  images: {
-    unoptimized: true,
-  },
   turbopack: {
     rules: {
       '*.svg': {
