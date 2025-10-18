@@ -6,7 +6,7 @@ import { notFound } from 'next/navigation';
 
 export default async function ConsultingPage({
   params,
-}: PageProps<'/[locale]/services/web-development'>) {
+}: PageProps<'/[locale]/services/consulting'>) {
   const { locale } = await params;
 
   if (!hasLocale(routing.locales, locale)) {
