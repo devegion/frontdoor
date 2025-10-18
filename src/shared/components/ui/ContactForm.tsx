@@ -40,7 +40,7 @@ const initialFormState: Record<string, string> = {
   message: '',
 };
 
-export default function ContactForm({ className }: { className?: ClassNameValue }) {
+export function ContactForm({ className }: { className?: ClassNameValue }) {
   const [formData, setFormData] = useState({ ...initialFormState });
   const [isLoading, setIsLoading] = useState(false);
 

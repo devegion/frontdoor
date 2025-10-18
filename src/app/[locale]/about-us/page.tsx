@@ -1,9 +1,25 @@
-import { AboutSectionsList, ScrollRevealText } from '@/app/[locale]/about-us/components';
 import { routing } from '@/i18n/routing';
 import { Section } from '@/shared/components';
+import { Metadata } from 'next';
 import { hasLocale } from 'next-intl';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
+
+import { AboutSectionsList, ScrollRevealText } from '@/app/[locale]/about-us/components';
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: 'en' | 'ro' }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'AboutPage.metadata' });
+
+  return {
+    title: t('title'),
+    description: t('description'),
+  };
+}
 
 export default async function AboutPage({ params }: PageProps<'/[locale]'>) {
   const { locale } = await params;

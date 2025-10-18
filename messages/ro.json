@@ -1,5 +1,9 @@
 {
   "HomePage": {
+    "metadata": {
+      "title": "Acasă",
+      "description": "Devegion construiește soluții web și mobile personalizate de la concept la lansare. Suntem experți în dezvoltare web, aplicații mobile, design UI/UX și consultanță software."
+    },
     "hero": {
       "header": {
         "part1": "Web & Mobil",
@@ -120,6 +124,10 @@
     "fullStory": "Citește toată povestea"
   },
   "AboutPage": {
+    "metadata": {
+      "title": "Despre Noi",
+      "description": "Descoperă povestea Devegion: Fondată în 2020 de Damian, am început cu workshop-uri și proiecte tech și am ajuns la servicii complete de web, mobile, design UI/UX și consultanță pentru antreprenori și firme. Alătură-te-ne în construirea de soluții inovatoare."
+    },
     "welcome": "Salut din Despre!",
     "title": "Povestea Noastră",
     "story": {
@@ -141,6 +149,12 @@
         "year": "2025",
         "description": "În 2025, ne-am îndreptat privirea către crearea unui impact semnificativ. Dincolo de livrarea de soluții web și mobile excelente, ne-am concentrat pe generarea de schimbare în industria și comunitatea noastră. Viziunea noastră s-a extins pentru a nu doar construi produse, ci și să împuternicim oamenii, cultivând un mediu unde tehnologia și potențialul uman cresc împreună."
       }
+    }
+  },
+  "ContactUsPage": {
+    "metadata": {
+      "title": "Contact",
+      "description": "Contactează Devegion astăzi pentru soluții web și mobile personalizate, design UI/UX și consultanță software. Discută proiectul tău cu echipa noastră prin formular sau la telefon, aici pentru viziunea ta."
     }
   },
   "Header": {

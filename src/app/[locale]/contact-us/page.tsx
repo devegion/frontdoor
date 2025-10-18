@@ -1,13 +1,28 @@
-import { routing } from '@/i18n/routing';
-import { hasLocale } from 'next-intl';
-import { setRequestLocale } from 'next-intl/server';
-import { notFound } from 'next/navigation';
 import { Mail, Phone } from 'lucide-react';
 
-import { Section, SectionDescription, SectionHeading } from '@/shared/components/ui/Section';
-import { Chip } from '@heroui/chip';
-import ContactForm from '@/shared/components/ui/ContactForm';
+import { routing } from '@/i18n/routing';
+import { hasLocale } from 'next-intl';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
+import { notFound } from 'next/navigation';
+import { Metadata } from 'next';
 import { ReactNode } from 'react';
+
+import { Section, SectionDescription, SectionHeading, ContactForm } from '@/shared/components/ui';
+import { Chip } from '@heroui/chip';
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: 'en' | 'ro' }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'ContactUsPage.metadata' });
+
+  return {
+    title: t('title'),
+    description: t('description'),
+  };
+}
 
 export default async function contactUsPage({ params }: PageProps<'/[locale]/contact-us'>) {
   const { locale } = await params;

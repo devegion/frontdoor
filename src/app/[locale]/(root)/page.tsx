@@ -1,9 +1,11 @@
 import { CircleQuestionMark, Laptop, Tablet, PenTool, Compass, ArrowRight } from 'lucide-react';
+import { RTMThumbnail, CCRThumbnail, PCThumbnail, VadrThumbnail } from '@/assets';
 
 import { hasLocale } from 'next-intl';
 import { routing } from '@/i18n/routing';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
+import { Metadata } from 'next';
 
 import {
   AnimatedTooltip,
@@ -12,72 +14,26 @@ import {
   SectionHeading,
   FAQ,
 } from '@/shared/components';
+import { ProjectCard, SolutionCard, Stats } from '@/app/[locale]/(root)/components';
+import { developers } from './content';
 
 import { Button } from '@heroui/button';
 import { Chip } from '@heroui/chip';
 import { Link } from '@heroui/link';
 
-import { ProjectCard, SolutionCard } from '@/app/[locale]/(root)/components';
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: 'en' | 'ro' }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'HomePage.metadata' });
 
-import {
-  DavidImg,
-  DamianImg,
-  GabImg,
-  BeaImg,
-  PopImg,
-  PoeImg,
-  CristiImg,
-  RTMThumbnail,
-  CCRThumbnail,
-  PCThumbnail,
-  VadrThumbnail,
-} from '@/assets';
-import { Stats } from '@/app/[locale]/(root)/components/Stats';
-
-const people = [
-  {
-    id: 1,
-    name: 'Damian',
-    designation: 'Fullstack Developer',
-    image: DamianImg,
-  },
-  {
-    id: 2,
-    name: 'Gab',
-    designation: 'UI/UX Designer',
-    image: GabImg,
-  },
-  {
-    id: 3,
-    name: 'David',
-    designation: 'Fullstack Developer',
-    image: DavidImg,
-  },
-  {
-    id: 4,
-    name: 'Bea',
-    designation: 'Fullstack Developer',
-    image: BeaImg,
-  },
-  {
-    id: 5,
-    name: 'Iulian Poe',
-    designation: 'Mobile Developer',
-    image: PoeImg,
-  },
-  {
-    id: 6,
-    name: 'Iulian Pop',
-    designation: 'Mobile Developer',
-    image: PopImg,
-  },
-  {
-    id: 7,
-    name: 'Cristi',
-    designation: 'Web Developer',
-    image: CristiImg,
-  },
-];
+  return {
+    title: t('title'),
+    description: t('description'),
+  };
+}
 
 export default async function HomePage({ params }: PageProps<'/[locale]'>) {
   const { locale } = await params;
@@ -194,7 +150,7 @@ export default async function HomePage({ params }: PageProps<'/[locale]'>) {
             </Chip>
             <SectionHeading>{t('people.title')}</SectionHeading>
             <div className='flex flex-row items-center justify-center'>
-              <AnimatedTooltip items={people} />
+              <AnimatedTooltip items={developers} />
             </div>
             <SectionDescription>{t('people.description')}</SectionDescription>
             <div className='flex flex-col items-center justify-center gap-5 sm:flex-row'>

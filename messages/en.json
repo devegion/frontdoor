@@ -1,5 +1,9 @@
 {
   "HomePage": {
+    "metadata": {
+      "title": "Home",
+      "description": "Devegion builds custom web and mobile solutions from concept to launch. We are experts in web development, mobile apps, UI/UX design, and software consulting."
+    },
     "hero": {
       "header": {
         "part1": "Web & Mobile",
@@ -121,6 +125,10 @@
     "fullStory": "Read the full story"
   },
   "AboutPage": {
+    "metadata": {
+      "title": "About Us",
+      "description": "Discover Devegion's story: Founded in 2020 by Damian, we grew from workshops and tech projects to web, mobile, UI/UX design, and consulting for entrepreneurs and businesses. Join us in building innovative solutions."
+    },
     "welcome": "Hello from About!",
     "title": "Our Story",
     "story": {
@@ -142,6 +150,12 @@
         "year": "2025",
         "description": "In 2025, we set our sights on creating meaningful impact. Beyond delivering excellent web and mobile solutions, we focused on driving change within our industry and community. Our vision expanded to not only build products but to empower people, fostering an environment where technology and human potential grow hand in hand."
       }
+    }
+  },
+  "ContactUsPage": {
+    "metadata": {
+      "title": "Contact Us",
+      "description": "Contact Devegion today for custom web and mobile solutions, UI/UX design, and software consulting. Discuss your project with our team via form or phone, here for your vision."
     }
   },
   "Header": {
