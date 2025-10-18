@@ -1,4 +1,4 @@
-export function Incoming() {
+export async function Incoming() {
   return (
     <main className='bg-background flex min-h-screen items-center justify-center'>
       <section className='mx-auto max-w-2xl px-6 text-center'>

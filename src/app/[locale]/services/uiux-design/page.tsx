@@ -1,5 +1,5 @@
 import { routing } from '@/i18n/routing';
-import { Incoming } from '@/shared/components/layout/Incoming';
+import { Incoming } from '@/shared/components/layout';
 import { hasLocale } from 'next-intl';
 import { setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
