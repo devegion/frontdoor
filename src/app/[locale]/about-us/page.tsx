@@ -5,7 +5,7 @@ import { hasLocale } from 'next-intl';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 
-export default async function AboutPage({ params }: PageProps<'/[locale]'>) {
+export default async function AboutPage({ params }: PageProps<'/[locale]/about-us'>) {
   const { locale } = await params;
   if (!hasLocale(routing.locales, locale)) {
     notFound();
