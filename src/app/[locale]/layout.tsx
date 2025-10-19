@@ -39,7 +39,9 @@ export default async function LocaleLayout({ children, params }: LayoutProps<'/[
   setRequestLocale(locale);
 
   return (
-    <html lang={locale} className={`${inter.variable} ${roboto.variable} antialiased`}>
+    <html
+      lang={locale}
+      className={`${inter.variable} ${roboto.variable} scroll-smooth antialiased`}>
       <body className='font-content'>
         <NextIntlClientProvider>
           <HeroProvider>

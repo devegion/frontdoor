@@ -6,12 +6,14 @@ import { Button } from '@heroui/button';
 import { ArrowRight, Check } from 'lucide-react';
 import { Chip } from '@heroui/chip';
 import { useTranslations } from 'next-intl';
+import Image, { StaticImageData } from 'next/image';
 
 export function SolutionCard({
   title,
   description,
   strongPoints,
   icon,
+  illustration,
   className,
   classNames,
   href,
@@ -20,8 +22,9 @@ export function SolutionCard({
   description: string;
   strongPoints: string[];
   icon: ReactNode;
+  illustration?: StaticImageData;
   className: ClassNameValue;
-  classNames?: { strongPoints?: ClassNameValue };
+  classNames?: { illustrationContainer?: ClassNameValue; illustrationStyling?: ClassNameValue };
 }) {
   const t = useTranslations('HomePage');
 
@@ -35,7 +38,11 @@ export function SolutionCard({
       )}>
       <div>
         <div className='flex items-center justify-between gap-4'>
-          <h3 className='font-headline text-lg font-semibold sm:text-xl xl:text-2xl'>{title}</h3>
+          <div>
+            <h3 className='font-headline relative text-lg font-semibold sm:text-xl xl:text-2xl'>
+              {title}
+            </h3>
+          </div>
           <Button
             variant='light'
             className='hidden opacity-0 transition duration-300 group-hover:opacity-100 sm:flex'
@@ -45,15 +52,26 @@ export function SolutionCard({
         </div>
         <p className='text-default-700'>{description}</p>
       </div>
-      {strongPoints.length > 0 && (
-        <ul className={cn('grid grid-cols-1 gap-2 font-semibold', classNames?.strongPoints)}>
-          {strongPoints.map((strongPoint, i) => (
-            <li className='flex items-center justify-start gap-2' key={i}>
-              <Check className='size-[1em]' /> {strongPoint}
-            </li>
-          ))}
-        </ul>
-      )}
+
+      <div className={cn('flex w-full', classNames?.illustrationContainer)}>
+        {strongPoints.length > 0 && (
+          <ul className={'grid grid-cols-1 gap-2 font-semibold'}>
+            {strongPoints.map((strongPoint, i) => (
+              <li className='flex items-center justify-start gap-2' key={i}>
+                <Check className='size-[1em]' /> {strongPoint}
+              </li>
+            ))}
+          </ul>
+        )}
+        {illustration && (
+          <Image
+            src={illustration}
+            alt=''
+            className={cn('mx-auto h-auto w-48', classNames?.illustrationStyling)}
+          />
+        )}
+      </div>
+
       <Chip
         size='sm'
         variant='shadow'
@@ -62,6 +80,7 @@ export function SolutionCard({
         radius='full'>
         {icon}
       </Chip>
+
       <Button
         variant='light'
         className='sm:hidden'

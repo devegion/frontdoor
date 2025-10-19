@@ -102,6 +102,8 @@ export function Header() {
 
   return (
     <Navbar
+      isMenuOpen={isMenuOpen}
+      disableAnimation={true}
       onMenuOpenChange={setIsMenuOpen}
       isBlurred={false}
       height='5rem'
@@ -113,7 +115,12 @@ export function Header() {
           className='md:hidden'
         />
         <NavbarBrand>
-          <Link color='foreground' href='/'>
+          <Link
+            onPress={() => {
+              setIsMenuOpen(false);
+            }}
+            color='foreground'
+            href='/'>
             <Logo />
           </Link>
         </NavbarBrand>
@@ -224,12 +231,15 @@ export function Header() {
               <NavbarMenuItem key={index}>
                 {navItem.href ?
                   <Link
+                    onPress={() => {
+                      setIsMenuOpen(false);
+                    }}
                     className='w-full'
                     href={navItem.href as string & RouterConfig['href']}
                     size='lg'>
                     {navItem.label}
                   </Link>
-                : <Accordion className='px-0'>
+                : <Accordion disableAnimation={true} className='px-0'>
                     <AccordionItem
                       classNames={{ trigger: 'py-0', title: 'text-large' }}
                       title={navItem.label}>
@@ -237,6 +247,9 @@ export function Header() {
                         {navItem.subItems.map((subItem) => {
                           return (
                             <Link
+                              onPress={() => {
+                                setIsMenuOpen(!false);
+                              }}
                               href={subItem.href as string & RouterConfig['href']}
                               key={subItem.label}>
                               {subItem.label}
@@ -250,6 +263,21 @@ export function Header() {
               </NavbarMenuItem>
             );
           })}
+          <div className='flex w-full grow flex-col justify-end pb-8'>
+            <Button
+              onPress={() => {
+                setIsMenuOpen(false);
+              }}
+              disableRipple
+              as={Link}
+              className=''
+              color='primary'
+              href='/contact-us'
+              variant='shadow'
+              radius='lg'>
+              {t('callToAction')}
+            </Button>
+          </div>
         </>
       </NavbarMenu>
     </Navbar>

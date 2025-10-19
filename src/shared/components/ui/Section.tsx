@@ -1,18 +1,32 @@
 'use client';
 
 import { cn } from '@/shared/utils/cn';
+import { HTMLMotionProps, motion } from 'framer-motion';
 import { ReactNode } from 'react';
 import { ClassNameValue } from 'tailwind-merge';
 
 export function Section({
   children,
   className,
+  isAnimated = true,
 }: {
   children: ReactNode;
   className?: ClassNameValue;
+  isAnimated?: boolean;
 }) {
+  const animationProps: HTMLMotionProps<'section'> = {
+    initial: { opacity: 0, y: 50 },
+    whileInView: { opacity: 1, y: 0 },
+    viewport: { once: true, amount: 0.1 },
+    transition: { duration: 0.5, ease: 'easeOut', delay: 0.3 },
+  };
+
   return (
-    <section className={cn('mx-auto w-10/12 max-w-7xl xl:w-8/12', className)}>{children}</section>
+    <motion.section
+      {...(isAnimated ? animationProps : {})}
+      className={cn('mx-auto w-10/12 max-w-7xl xl:w-8/12', className)}>
+      {children}
+    </motion.section>
   );
 }
 
