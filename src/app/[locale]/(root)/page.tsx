@@ -21,6 +21,10 @@ import { Button } from '@heroui/button';
 import { Chip } from '@heroui/chip';
 import { Link } from '@heroui/link';
 
+import WebDevIllustration from '@/assets/web-dev.png';
+import UiUxDesignIllustration from '@/assets/ui-ux-design.png';
+import MobileDevIllustration from '@/assets/mobile-dev.png';
+
 export async function generateMetadata({
   params,
 }: {
@@ -84,7 +88,7 @@ export default async function HomePage({ params }: PageProps<'/[locale]'>) {
               <SectionHeading>{t('services.title')}</SectionHeading>
               <SectionDescription>{t('services.description')}</SectionDescription>
             </div>
-            <div className='mx-auto grid w-full max-w-lg grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-5 lg:grid-rows-6'>
+            <div className='mx-auto grid w-full max-w-sm grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-5 lg:grid-rows-6'>
               <SolutionCard
                 title={t('services.webDevelopment.title')}
                 description={t('services.webDevelopment.description')}
@@ -93,13 +97,16 @@ export default async function HomePage({ params }: PageProps<'/[locale]'>) {
                   t('services.webDevelopment.strongPoint2'),
                   t('services.webDevelopment.strongPoint3'),
                   t('services.webDevelopment.strongPoint4'),
-                  t('services.webDevelopment.strongPoint5'),
-                  t('services.webDevelopment.strongPoint6'),
+                  // t('services.webDevelopment.strongPoint5'),
+                  // t('services.webDevelopment.strongPoint6'),
                 ]}
                 icon={<Laptop />}
+                illustration={WebDevIllustration}
                 href='/services/web-development'
                 className='lg:col-span-3 lg:row-span-3'
-                classNames={{ strongPoints: 'lg:grid-cols-2' }}
+                classNames={{
+                  illustrationContainer: 'flex-col-reverse lg:flex-row items-start gap-4',
+                }}
               />
               <SolutionCard
                 title={t('services.uiuxDesign.title')}
@@ -111,8 +118,10 @@ export default async function HomePage({ params }: PageProps<'/[locale]'>) {
                   t('services.uiuxDesign.strongPoint4'),
                 ]}
                 icon={<PenTool />}
+                illustration={UiUxDesignIllustration}
                 href='/'
                 className='lg:col-span-2 lg:row-span-4'
+                classNames={{ illustrationContainer: 'flex-col-reverse lg:flex-col gap-10' }}
               />
               <SolutionCard
                 title={t('services.mobileDevelopment.title')}
@@ -124,9 +133,12 @@ export default async function HomePage({ params }: PageProps<'/[locale]'>) {
                   t('services.mobileDevelopment.strongPoint4'),
                 ]}
                 icon={<Tablet />}
+                illustration={MobileDevIllustration}
                 href='/'
                 className='lg:col-span-3 lg:row-span-3'
-                classNames={{ strongPoints: 'lg:grid-cols-2' }}
+                classNames={{
+                  illustrationContainer: 'flex-col-reverse lg:flex-row items-start gap-4',
+                }}
               />
               <SolutionCard
                 title={t('services.consulting.title')}
@@ -138,7 +150,6 @@ export default async function HomePage({ params }: PageProps<'/[locale]'>) {
                 icon={<Compass />}
                 href='/'
                 className='lg:col-span-2 lg:row-span-2'
-                classNames={{ strongPoints: 'lg:grid-cols-2' }}
               />
             </div>
           </div>
@@ -235,72 +246,7 @@ export default async function HomePage({ params }: PageProps<'/[locale]'>) {
             </div>
           </div>
         </Section>
-        {/* <Section>
-          <div className='flex flex-col items-center gap-16'>
-            <div className='flex flex-col items-center gap-8'>
-              <Chip size='md' variant='bordered' className='py-4 shadow' radius='full'>
-                {t('reviews.badge')}
-              </Chip>
-              <SectionHeading>
-                {t('reviews.title1')} <span className='text-primary'>{t('reviews.title2')}</span>
-                <br /> {t('reviews.title3')}
-              </SectionHeading>
-              <SectionDescription>{t('reviews.description')}</SectionDescription>
-            </div>
-            <Carousel
-              opts={{
-                align: 'start',
-              }}
-              className='w-full max-w-lg space-y-4 md:max-w-none'>
-              <CarouselContent className='mr-1 -ml-4 min-h-80 p-1'>
-                <CarouselItem className='pl-4 md:basis-1/2 xl:basis-1/3'>
-                  <ReviewCard
-                    image={DavidImg}
-                    name='Review 1'
-                    title='Owner of Loolish'
-                    description='Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam voluptatum hic vel officiis accusamus, fugiat quidem architecto sit in a magni dolores neque sapiente ipsam fuga. Perferendis quasi sit illum, quas tempore vel qui.'
-                  />
-                </CarouselItem>
-                <CarouselItem className='pl-4 md:basis-1/2 xl:basis-1/3'>
-                  <ReviewCard
-                    image={DavidImg}
-                    name='Review 1'
-                    title='Owner of Loolish'
-                    description='Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam voluptatum hic vel officiis accusamus, fugiat quidem architecto sit in a magni dolores neque sapiente ipsam fuga. Perferendis quasi sit illum, quas tempore vel qui.'
-                  />
-                </CarouselItem>
-                <CarouselItem className='pl-4 md:basis-1/2 xl:basis-1/3'>
-                  <ReviewCard
-                    image={DavidImg}
-                    name='Review 1'
-                    title='Owner of Loolish'
-                    description='Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam voluptatum hic vel officiis accusamus, fugiat quidem architecto sit in a magni dolores neque sapiente ipsam fuga. Perferendis quasi sit illum, quas tempore vel qui.'
-                  />
-                </CarouselItem>
-                <CarouselItem className='pl-4 md:basis-1/2 xl:basis-1/3'>
-                  <ReviewCard
-                    image={DavidImg}
-                    name='Review 1'
-                    title='Owner of Loolish'
-                    description='Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam voluptatum hic vel officiis accusamus, fugiat quidem architecto sit in a magni dolores neque sapiente ipsam fuga. Perferendis quasi sit illum, quas tempore vel qui.'
-                  />
-                </CarouselItem>
-                <CarouselItem className='pl-4 md:basis-1/2 xl:basis-1/3'>
-                  <ReviewCard
-                    image={DavidImg}
-                    name='Review 1'
-                    title='Owner of Loolish'
-                    description='Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam voluptatum hic vel officiis accusamus, fugiat quidem architecto sit in a magni dolores neque sapiente ipsam fuga. Perferendis quasi sit illum, quas tempore vel qui.'
-                  />
-                </CarouselItem>
-              </CarouselContent>
-              <div className='flex items-center gap-2'>
-                <CarouselPrevious />
-                <CarouselNext />
-              </div>
-            </Carousel>
-          </div>
-        </Section> */}
+
         <Section>
           <div className='flex w-full flex-col items-center gap-16'>
             <div className='flex flex-col items-center gap-8'>
