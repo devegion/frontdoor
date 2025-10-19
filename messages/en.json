@@ -258,5 +258,10 @@
     "projects": {
       "title": "Projects"
     }
+  },
+  "ComingSoon": {
+    "title": "New Look Loading",
+    "description": "We're refreshing this page to deliver a sharper, more pleasing experience, be the first to explore the redesign.",
+    "launchInfo": "New look arriving soon"
   }
 }

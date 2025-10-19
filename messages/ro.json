@@ -257,5 +257,10 @@
     "projects": {
       "title": "Proiecte"
     }
+  },
+  "ComingSoon": {
+    "title": "Se încarcă noul design",
+    "description": "Actualizăm această pagină pentru a oferi o experiență mai rapidă și mai plăcută, fii primul care explorează redesignul",
+    "launchInfo": "Noul design sosește curând"
   }
 }

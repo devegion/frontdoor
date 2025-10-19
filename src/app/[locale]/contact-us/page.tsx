@@ -24,7 +24,7 @@ export async function generateMetadata({
   };
 }
 
-export default async function contactUsPage({ params }: PageProps<'/[locale]/contact-us'>) {
+export default async function ContactUsPage({ params }: PageProps<'/[locale]/contact-us'>) {
   const { locale } = await params;
 
   if (!hasLocale(routing.locales, locale)) {

@@ -3,7 +3,7 @@ import { defineRouting } from 'next-intl/routing';
 export const routing = defineRouting({
   locales: ['en', 'ro'],
 
-  defaultLocale: 'en',
+  defaultLocale: 'ro',
 
   pathnames: {
     '/': '/',
@@ -12,6 +12,12 @@ export const routing = defineRouting({
     },
     '/projects': {
       ro: '/proiecte',
+    },
+    '/projects/carcarero/privacy-policy': {
+      ro: '/proiecte/carcarero/politica-de-confidentialitate',
+    },
+    '/projects/restaurantm/privacy-policy': {
+      ro: '/proiecte/restaurantm/politica-de-confidentialitate',
     },
     '/services/web-development': {
       ro: '/servicii/dezvoltare-aplicatii-web',
@@ -33,5 +39,5 @@ export const routing = defineRouting({
     },
   },
 
-  localeDetection: false,
+  localeDetection: true,
 });

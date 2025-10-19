@@ -4,7 +4,6 @@ import { Metadata } from 'next';
 import { hasLocale } from 'next-intl';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
-
 import { AboutSectionsList, ScrollRevealText } from '@/app/[locale]/about-us/components';
 
 export async function generateMetadata({
@@ -21,7 +20,7 @@ export async function generateMetadata({
   };
 }
 
-export default async function AboutPage({ params }: PageProps<'/[locale]'>) {
+export default async function AboutPage({ params }: PageProps<'/[locale]/about-us'>) {
   const { locale } = await params;
   if (!hasLocale(routing.locales, locale)) {
     notFound();

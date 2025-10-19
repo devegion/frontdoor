@@ -1,16 +1,24 @@
 import type { NextConfig } from 'next';
 import createNextIntlPlugin from 'next-intl/plugin';
+import createMDX from '@next/mdx';
 
 const nextConfig: NextConfig = {
   typedRoutes: true,
-  turbopack: {
-    rules: {
-      '*.svg': {
-        loaders: ['@svgr/webpack'],
-        as: '*.js',
-      },
-    },
+  webpack(config) {
+    config.module.rules.push({
+      test: /\.svg$/,
+      use: [
+        {
+          loader: '@svgr/webpack',
+          options: {
+            icon: true,
+          },
+        },
+      ],
+    });
+    return config;
   },
+  pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
 };
 
 const withNextIntl = createNextIntlPlugin({
@@ -19,4 +27,6 @@ const withNextIntl = createNextIntlPlugin({
   },
 });
 
-export default withNextIntl(nextConfig);
+const withMDX = createMDX({});
+
+export default withNextIntl(withMDX(nextConfig));

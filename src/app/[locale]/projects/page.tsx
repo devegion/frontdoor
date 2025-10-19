@@ -1,5 +1,16 @@
-import { Incoming } from '@/shared/components/layout/Incoming';
+import { routing } from '@/i18n/routing';
+import { Incoming } from '@/shared/components/layout';
+import { hasLocale } from 'next-intl';
+import { setRequestLocale } from 'next-intl/server';
+import { notFound } from 'next/navigation';
 
-export default function ProjectsPage() {
+export default async function ProjectsPage({ params }: PageProps<'/[locale]/projects'>) {
+  const { locale } = await params;
+
+  if (!hasLocale(routing.locales, locale)) {
+    notFound();
+  }
+  setRequestLocale(locale);
+
   return <Incoming />;
 }

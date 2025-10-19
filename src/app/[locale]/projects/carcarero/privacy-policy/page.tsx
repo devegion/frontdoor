@@ -2,10 +2,12 @@ import { routing } from '@/i18n/routing';
 import { hasLocale } from 'next-intl';
 import { setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
-import PrivacyPolicyRo from '@/content/ro/privacy-policy.mdx';
-import PrivacyPolicyEn from '@/content/en/privacy-policy.mdx';
+import CarCareRoPrivacyPolicyRo from '@/content/ro/carcarero.mdx';
+import CarCareRoPrivacyPolicyEn from '@/content/en/carcarero.mdx';
 
-export default async function PrivacyPolicyPage({ params }: PageProps<'/[locale]/privacy-policy'>) {
+export default async function CarCareRoPrivacyPolicyPage({
+  params,
+}: PageProps<'/[locale]/projects/carcarero/privacy-policy'>) {
   const { locale } = await params;
 
   if (!hasLocale(routing.locales, locale)) {
@@ -16,8 +18,8 @@ export default async function PrivacyPolicyPage({ params }: PageProps<'/[locale]
   return (
     <article className='prose xl:prose-lg 2xl:prose-xl prose-headings:font-headline font-content mx-auto mt-20 mb-32 w-10/12 max-w-7xl xl:mb-44 xl:w-8/12 2xl:mb-64'>
       {locale === 'ro' ?
-        <PrivacyPolicyRo />
-      : <PrivacyPolicyEn />}
+        <CarCareRoPrivacyPolicyRo />
+      : <CarCareRoPrivacyPolicyEn />}
     </article>
   );
 }
