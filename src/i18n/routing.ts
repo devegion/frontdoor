@@ -19,6 +19,9 @@ export const routing = defineRouting({
     '/projects/restaurantm/privacy-policy': {
       ro: '/proiecte/restaurantm/politica-de-confidentialitate',
     },
+    '/projects/tccapp/privacy-policy': {
+      ro: '/proiecte/tccapp/politica-de-confidentialitate',
+    },
     '/services/web-development': {
       ro: '/servicii/dezvoltare-aplicatii-web',
     },
