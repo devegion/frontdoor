@@ -8,7 +8,7 @@ import { Chip } from '@heroui/chip';
 import { useTranslations } from 'next-intl';
 import Image, { StaticImageData } from 'next/image';
 
-export function SolutionCard({
+export function ServiceCard({
   title,
   description,
   strongPoints,

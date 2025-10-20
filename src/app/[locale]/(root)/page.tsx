@@ -1,11 +1,11 @@
-import { CircleQuestionMark, Laptop, Tablet, PenTool, Compass, ArrowRight } from 'lucide-react';
-import { RTMThumbnail, CCRThumbnail, PCThumbnail, VadrThumbnail } from '@/assets';
+import { CircleQuestionMark, ArrowRight } from 'lucide-react';
 
 import { hasLocale } from 'next-intl';
 import { routing } from '@/i18n/routing';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { Metadata } from 'next';
+import type { RouterConfig } from '@react-types/shared';
 
 import {
   AnimatedTooltip,
@@ -13,17 +13,13 @@ import {
   SectionDescription,
   SectionHeading,
   FAQ,
-} from '@/shared/components';
-import { ProjectCard, SolutionCard, Stats } from '@/app/[locale]/(root)/components';
-import { developers } from './content';
+} from '@/shared/components/ui';
+import { ProjectCard, ServiceCard, Stats } from '@/app/[locale]/(root)/components';
+import { developers, getProjects, getServices } from './content';
 
 import { Button } from '@heroui/button';
 import { Chip } from '@heroui/chip';
 import { Link } from '@heroui/link';
-
-import WebDevIllustration from '@/assets/web-dev.png';
-import UiUxDesignIllustration from '@/assets/ui-ux-design.png';
-import MobileDevIllustration from '@/assets/mobile-dev.png';
 
 export async function generateMetadata({
   params,
@@ -89,68 +85,19 @@ export default async function HomePage({ params }: PageProps<'/[locale]'>) {
               <SectionDescription>{t('services.description')}</SectionDescription>
             </div>
             <div className='mx-auto grid w-full max-w-sm grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-5 lg:grid-rows-6'>
-              <SolutionCard
-                title={t('services.webDevelopment.title')}
-                description={t('services.webDevelopment.description')}
-                strongPoints={[
-                  t('services.webDevelopment.strongPoint1'),
-                  t('services.webDevelopment.strongPoint2'),
-                  t('services.webDevelopment.strongPoint3'),
-                  t('services.webDevelopment.strongPoint4'),
-                  // t('services.webDevelopment.strongPoint5'),
-                  // t('services.webDevelopment.strongPoint6'),
-                ]}
-                icon={<Laptop />}
-                illustration={WebDevIllustration}
-                href='/services/web-development'
-                className='lg:col-span-3 lg:row-span-3'
-                classNames={{
-                  illustrationContainer: 'flex-col-reverse lg:flex-row items-start gap-4',
-                }}
-              />
-              <SolutionCard
-                title={t('services.uiuxDesign.title')}
-                description={t('services.uiuxDesign.description')}
-                strongPoints={[
-                  t('services.uiuxDesign.strongPoint1'),
-                  t('services.uiuxDesign.strongPoint2'),
-                  t('services.uiuxDesign.strongPoint3'),
-                  t('services.uiuxDesign.strongPoint4'),
-                ]}
-                icon={<PenTool />}
-                illustration={UiUxDesignIllustration}
-                href='/'
-                className='lg:col-span-2 lg:row-span-4'
-                classNames={{ illustrationContainer: 'flex-col-reverse lg:flex-col gap-10' }}
-              />
-              <SolutionCard
-                title={t('services.mobileDevelopment.title')}
-                description={t('services.mobileDevelopment.description')}
-                strongPoints={[
-                  t('services.mobileDevelopment.strongPoint1'),
-                  t('services.mobileDevelopment.strongPoint2'),
-                  t('services.mobileDevelopment.strongPoint3'),
-                  t('services.mobileDevelopment.strongPoint4'),
-                ]}
-                icon={<Tablet />}
-                illustration={MobileDevIllustration}
-                href='/'
-                className='lg:col-span-3 lg:row-span-3'
-                classNames={{
-                  illustrationContainer: 'flex-col-reverse lg:flex-row items-start gap-4',
-                }}
-              />
-              <SolutionCard
-                title={t('services.consulting.title')}
-                description={t('services.consulting.description')}
-                strongPoints={[
-                  t('services.consulting.strongPoint1'),
-                  t('services.consulting.strongPoint2'),
-                ]}
-                icon={<Compass />}
-                href='/'
-                className='lg:col-span-2 lg:row-span-2'
-              />
+              {getServices(t).map((service, i) => (
+                <ServiceCard
+                  key={i}
+                  title={service.title}
+                  description={service.description}
+                  strongPoints={service.strongPoints}
+                  icon={service.icon}
+                  illustration={service.illustration}
+                  href={service.href as string & RouterConfig['href']}
+                  className={service.className}
+                  classNames={service.classNames}
+                />
+              ))}
             </div>
           </div>
         </Section>
@@ -211,42 +158,20 @@ export default async function HomePage({ params }: PageProps<'/[locale]'>) {
               </div>
             </div>
             <div className='mx-auto grid grid-cols-1 gap-8 sm:grid-cols-2 lg:gap-16'>
-              <ProjectCard
-                title={t('projects.restaurantTm.title')}
-                description={t('projects.restaurantTm.description')}
-                image={RTMThumbnail}
-                projectLink='/projects'
-                detailsLink='/projects'
-                badges={[]}
-              />
-              <ProjectCard
-                title={t('projects.carCareRo.title')}
-                description={t('projects.carCareRo.description')}
-                image={CCRThumbnail}
-                projectLink='/projects'
-                detailsLink='/projects'
-                badges={[]}
-              />
-              <ProjectCard
-                title={t('projects.paulPhoto.title')}
-                description={t('projects.paulPhoto.description')}
-                image={PCThumbnail}
-                projectLink='/projects'
-                detailsLink='/projects'
-                badges={[]}
-              />
-              <ProjectCard
-                title={t('projects.vaudior.title')}
-                description={t('projects.vaudior.description')}
-                image={VadrThumbnail}
-                projectLink='/projects'
-                detailsLink='/projects'
-                badges={[]}
-              />
+              {getProjects(t).map((project, index) => (
+                <ProjectCard
+                  key={index}
+                  title={project.title}
+                  description={project.description}
+                  image={project.image}
+                  projectLink='/projects'
+                  detailsLink='/projects'
+                  badges={[]}
+                />
+              ))}
             </div>
           </div>
         </Section>
-
         <Section>
           <div className='flex w-full flex-col items-center gap-16'>
             <div className='flex flex-col items-center gap-8'>

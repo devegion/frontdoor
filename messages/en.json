@@ -201,6 +201,30 @@
     },
     "sendMessage": "Send Message"
   },
+  "Services": {
+    "WebDevelopmentPage": {
+      "metadata": { "title": "Web Development", "description": "" },
+      "hero": { "title": "Web Apps That Sell", "description": "Some crazy good description" }
+    },
+    "MobileDevelopmentPage": {
+      "metadata": { "title": "Mobile Development", "description": "" },
+      "hero": {
+        "title": "Production Ready Mobile Apps",
+        "description": "Some crazy good description"
+      }
+    },
+    "UIUXDesignPage": {
+      "metadata": { "title": "UI/UX Design", "description": "" },
+      "hero": { "title": "Pixel-Perfect Design", "description": "Some crazy good description" }
+    },
+    "ConsultingPage": {
+      "metadata": { "title": "Software Consulting", "description": "" },
+      "hero": {
+        "title": "Value Focused Software Consulting",
+        "description": "Some crazy good description"
+      }
+    }
+  },
   "Header": {
     "openNavbarMenu": "Close menu",
     "closeNavbarMenu": "Open menu",
