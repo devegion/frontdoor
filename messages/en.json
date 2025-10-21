@@ -203,15 +203,18 @@
   },
   "Services": {
     "WebDevelopmentPage": {
-      "metadata": { "title": "Web Development", "description": "" },
+      "metadata": {
+        "title": "Web Development",
+        "description": "Devegion delivers high‑performance web development, custom websites, and scalable web apps optimized for growth, conversion, and modern user experience."
+      },
       "hero": {
         "title": "Web Apps That Sell",
-        "description": "Some crazy good description",
+        "description": "From idea to launch, we craft fast, scalable, and user‑focused web apps designed to drive real business growth.",
         "callToAction": "Kickstart your idea"
       },
       "howItWorks": {
         "title": "How We'll Build Your Website",
-        "description": "Some crazy good description",
+        "description": "Our process combines clear communication, agile development, and powerful design to ensure your product succeeds from day one.",
         "stages": {
           "stage1": {
             "title": "Discuss Your Vision",
@@ -223,63 +226,118 @@
           },
           "stage3": {
             "title": "Build & Iterate",
-            "description": "Stay in the loop with regular progress updates. We adapt and pivot based on your feedback to ensure perfect alignment"
+            "description": "Stay in the loop with regular progress updates. We adapt and pivot based on your feedback to ensure perfect alignment."
           },
           "stage4": {
             "title": "Support & Scale",
             "description": "Launch with confidence knowing we're here for maintenance, bug fixes, and adding new features as your product grows."
           }
+        },
+        "callToAction": {
+          "title": "Ready to Build Something Amazing?",
+          "button": "Let's have a Call"
         }
       }
     },
+
     "MobileDevelopmentPage": {
-      "metadata": { "title": "Mobile Development", "description": "" },
+      "metadata": {
+        "title": "Mobile Development",
+        "description": "Devegion builds high‑quality mobile apps for iOS and Android using modern frameworks and scalable architectures. We transform your ideas into seamless, engaging mobile experiences that drive growth and delight users."
+      },
       "hero": {
         "title": "Production Ready Mobile Apps",
-        "description": "Some crazy good description",
+        "description": "From concept to deployment, Devegion delivers fast, secure, and beautifully designed mobile apps that perform flawlessly across devices.",
         "callToAction": "Kickstart your idea"
       },
       "howItWorks": {
         "title": "How We'll Build Your Mobile App",
-        "description": "Some crazy good description",
+        "description": "Our mobile development process combines strategy, design, and agile execution to create feature‑rich apps that scale with your business.",
         "stages": {
-          "stage1": { "title": "", "description": "" },
-          "stage2": { "title": "", "description": "" },
-          "stage3": { "title": "", "description": "" }
+          "stage1": {
+            "title": "Define Your Product Vision",
+            "description": "We dive deep into your concept, understand your target audience, and outline a clear strategy that connects your business goals with user needs."
+          },
+          "stage2": {
+            "title": "Design & Prototype",
+            "description": "Our design team crafts intuitive, visually appealing interfaces and clickable prototypes so you can preview the experience early on."
+          },
+          "stage3": {
+            "title": "Develop, Test & Launch",
+            "description": "We bring your app to life using robust technologies, ensure flawless performance through rigorous QA testing, and guide you through App Store and Google Play releases."
+          }
+        },
+        "callToAction": {
+          "title": "Ready to Build Something Amazing?",
+          "button": "Let's have a Call"
         }
       }
     },
+
     "UIUXDesignPage": {
-      "metadata": { "title": "UI/UX Design", "description": "" },
+      "metadata": {
+        "title": "UI/UX Design",
+        "description": "Devegion creates stunning UI/UX designs that combine beauty, simplicity, and performance. We craft intuitive interfaces and user journeys that boost engagement and convert visitors into customers."
+      },
       "hero": {
         "title": "Pixel-Perfect Design",
-        "description": "Some crazy good description",
+        "description": "At Devegion, we design visually captivating, user‑focused experiences that make your product stand out in a crowded digital landscape.",
         "callToAction": "Kickstart your idea"
       },
       "howItWorks": {
         "title": "The Design Process",
-        "description": "Some crazy good description",
+        "description": "Our design process balances creativity with user strategy to shape a product that feels effortless, looks exceptional, and meets real user needs.",
         "stages": {
-          "stage1": { "title": "", "description": "" },
-          "stage2": { "title": "", "description": "" },
-          "stage3": { "title": "", "description": "" }
+          "stage1": {
+            "title": "Research & Discovery",
+            "description": "We start by understanding your users, analyzing competitors, and identifying your product’s unique value to build a strong foundation for design."
+          },
+          "stage2": {
+            "title": "Wireframes & Prototyping",
+            "description": "We translate ideas into structure using wireframes and interactive prototypes, ensuring clarity and usability before the visuals take shape."
+          },
+          "stage3": {
+            "title": "Visual Design & Handoff",
+            "description": "Our designers polish every pixel to create a cohesive and scalable design system. We deliver ready‑to‑implement assets for your development team."
+          }
+        },
+        "callToAction": {
+          "title": "Ready to Build Something Amazing?",
+          "button": "Let's have a Call"
         }
       }
     },
+
     "ConsultingPage": {
-      "metadata": { "title": "Software Consulting", "description": "" },
+      "metadata": {
+        "title": "Software Consulting",
+        "description": "Devegion provides expert software consulting to help businesses validate ideas, optimize architecture, and ensure product scalability. We guide you from concept to execution with data-backed strategies and technical excellence."
+      },
       "hero": {
         "title": "Value Focused Software Consulting",
-        "description": "Some crazy good description",
+        "description": "Partner with Devegion to turn your business challenges into actionable tech solutions. We align strategy, design, and technology to maximize impact and minimize risk.",
         "callToAction": "Kickstart your idea"
       },
       "howItWorks": {
         "title": "How We Do Software Consulting",
-        "description": "Some crazy good description",
+        "description": "Our consulting process blends deep technical expertise with strategic insight, helping you make smarter decisions and build software that drives measurable results.",
         "stages": {
-          "stage1": { "title": "", "description": "" },
-          "stage2": { "title": "", "description": "" },
-          "stage3": { "title": "", "description": "" }
+          "stage1": {
+            "title": "Assess & Strategize",
+            "description": "We evaluate your current systems, clarify business goals, and define a roadmap to improve performance, scalability, and overall efficiency."
+          },
+          "stage2": {
+            "title": "Design & Recommend Solutions",
+            "description": "Based on your objectives, we propose architectures, frameworks, and technologies tailored to your requirements and team capabilities."
+          },
+          "stage3": {
+            "title": "Implement & Optimize",
+            "description": "We help you put insights into action—overseeing implementation, refining workflows, and setting up a foundation for continuous improvement."
+          }
+        },
+        "callToAction": {
+          "title": "Ready to Build Something Amazing?",
+          "button": "Let's have a Call"
         }
       }
     }

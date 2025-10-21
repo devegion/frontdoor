@@ -119,7 +119,7 @@ export default async function ServicePage({ params }: PageProps<'/[locale]/servi
         </Section>
         <Section className='shadow-primary-200 bg-primary flex flex-col items-center gap-8 rounded-3xl p-16 shadow-lg'>
           <SectionHeading className='text-2x text-background sm:text-3xl xl:text-4xl'>
-            Ready to Build Something Amazing?
+            {t('howItWorks.callToAction.title')}
           </SectionHeading>
           <Button
             as={Link}
@@ -128,7 +128,7 @@ export default async function ServicePage({ params }: PageProps<'/[locale]/servi
             color='primary'
             size='lg'
             radius='lg'>
-            {t('hero.callToAction')}
+            {t('howItWorks.callToAction.button')}
           </Button>
         </Section>
       </div>
