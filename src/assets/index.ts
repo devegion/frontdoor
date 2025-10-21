@@ -9,7 +9,7 @@ import PoeImg from '@/assets/developers/poe.webp';
 import RTMThumbnail from '@/assets/projects/rtm_thumbnail.png';
 import CCRThumbnail from '@/assets/projects/ccr_thumbnail.png';
 import PCThumbnail from '@/assets/projects/pc_thumbnail.png';
-import VadrThumbnail from '@/assets/projects/vadr_thumbnail.png';
+import MCThumbnail from '@/assets/projects/mc_thumbnail.png';
 
 import WebDevIllustration from '@/assets/illustrations/web-dev.png';
 import MobileDevIllustration from '@/assets/illustrations/mobile-dev.png';
@@ -27,7 +27,7 @@ export {
   RTMThumbnail,
   CCRThumbnail,
   PCThumbnail,
-  VadrThumbnail,
+  MCThumbnail,
   WebDevIllustration,
   MobileDevIllustration,
   UIUXDesignIllustration,

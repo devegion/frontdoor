@@ -10,14 +10,14 @@ export function ProjectCard({
   title,
   description,
   image,
-  detailsLink,
+  // detailsLink,
   projectLink,
   badges,
 }: {
   title: string;
   description: string;
   image: StaticImageData;
-  detailsLink: string;
+  // detailsLink: string;
   projectLink: string;
   badges: string[];
 }) {
@@ -44,7 +44,13 @@ export function ProjectCard({
         </div>
         <Divider orientation='horizontal' />
         <div className='flex w-full items-center justify-between gap-2'>
-          <Button as={Link} className='grow' radius='lg' variant='bordered' href={detailsLink}>
+          <Button
+            as={Link}
+            className='grow'
+            radius='lg'
+            isExternal
+            variant='bordered'
+            href={projectLink}>
             {t('viewDetails')}
           </Button>
           <Button as={Link} radius='lg' variant='light' isExternal href={projectLink} isIconOnly>

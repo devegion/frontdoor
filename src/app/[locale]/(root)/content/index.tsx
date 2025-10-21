@@ -9,7 +9,7 @@ import {
   RTMThumbnail,
   CCRThumbnail,
   PCThumbnail,
-  VadrThumbnail,
+  MCThumbnail,
   WebDevIllustration,
   MobileDevIllustration,
   UIUXDesignIllustration,
@@ -67,22 +67,26 @@ export const getProjects = (t: (key: any) => any) => [
   {
     title: t('projects.restaurantTm.title'),
     description: t('projects.restaurantTm.description'),
+    link: 'https://apps.apple.com/ro/app/restaurantm/id6480377800',
     image: RTMThumbnail,
   },
   {
     title: t('projects.carCareRo.title'),
     description: t('projects.carCareRo.description'),
+    link: 'https://apps.apple.com/ro/app/carcarero/id6695759849',
     image: CCRThumbnail,
   },
   {
     title: t('projects.paulPhoto.title'),
     description: t('projects.paulPhoto.description'),
+    link: 'https://paulclapa.com/',
     image: PCThumbnail,
   },
   {
-    title: t('projects.vaudior.title'),
-    description: t('projects.vaudior.description'),
-    image: VadrThumbnail,
+    title: t('projects.mcdermot.title'),
+    description: t('projects.mcdermot.description'),
+    link: 'https://remarkable-youtiao-a10fa9.netlify.app/',
+    image: MCThumbnail,
   },
 ];
 

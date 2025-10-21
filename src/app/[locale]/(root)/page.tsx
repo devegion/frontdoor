@@ -151,7 +151,7 @@ export default async function HomePage({ params }: PageProps<'/[locale]'>) {
                   variant='ghost'
                   size='md'
                   color='default'
-                  className='hidden lg:flex'
+                  className='hidden'
                   radius='full'>
                   {t('viewProjects')}
                 </Button>
@@ -164,8 +164,8 @@ export default async function HomePage({ params }: PageProps<'/[locale]'>) {
                   title={project.title}
                   description={project.description}
                   image={project.image}
-                  projectLink='/projects'
-                  detailsLink='/projects'
+                  projectLink={project.link}
+                  // detailsLink={project.link}
                   badges={[]}
                 />
               ))}

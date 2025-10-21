@@ -69,11 +69,11 @@
       },
       "paulPhoto": {
         "title": "PaulPhoto",
-        "description": "A custom-made web portfolio platform for a photographe. Showcase stunning photography collections with flexible layouts, easy content management, and a professional presentation that lets the work speak for itself."
+        "description": "A custom-made web portfolio platform for a photographer. Showcase stunning photography collections with flexible layouts, easy content management, and a professional presentation that lets the work speak for itself."
       },
-      "vaudior": {
-        "title": "VaudioR",
-        "description": "An innovative VR mobile app that transforms audiobooks into immersive experiences. AI-generated landscapes and scenes bring stories to life, creating visual environments that match the narrative you're hearing."
+      "mcdermot": {
+        "title": "MCDermot",
+        "description": "A custom-built web platform for a UK landscaping company. Highlight beautiful outdoor transformations with a modern, fully bespoke design powered by a headless CMS."
       }
     },
     "people": {

@@ -71,9 +71,9 @@
         "title": "PaulPhoto",
         "description": "Platformă web de portofoliu pentru un fotograf. Prezintă colecții fotografice impresionante cu layout-uri flexibile, gestionare ușoară a conținutului și o prezentare profesională care lasă munca să vorbească de la sine."
       },
-      "vaudior": {
-        "title": "VaudioR",
-        "description": "Aplicație mobilă VR inovatoare care transformă cărțile audio în experiențe captivante. Peisaje și scene generate cu AI aduc poveștile la viață, creând medii vizuale care se potrivesc cu narațiunea pe care o asculți."
+      "mcDermot": {
+        "title": "MCDermot",
+        "description": "Platformă web creată pentru o companie de peisagistică din Marea Britanie. Evidențiază transformări spectaculoase ale spațiilor exterioare printr-un design modern și complet personalizat, bazat pe un sistem headless CMS."
       }
     },
     "people": {
