@@ -13,7 +13,9 @@ import { cn } from '@/shared/utils';
 import { Chip } from '@heroui/chip';
 
 export function generateStaticParams() {
-  return serviceSlugs;
+  // Next.js is not happy with readonly params;
+  const slugs = [...serviceSlugs];
+  return slugs;
 }
 
 export async function generateMetadata({
