@@ -1,4 +1,4 @@
 export * from './ProjectCard';
-export * from './SolutionCard';
+export * from './ServiceCard';
 export * from './ReviewCard';
 export * from './Stats';

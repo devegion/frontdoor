@@ -4,7 +4,7 @@ import { routing } from '@/i18n/routing';
 import { setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { Inter, Roboto } from 'next/font/google';
-import { Header, Footer } from '@/shared/components';
+import { Header, Footer } from '@/shared/components/layout';
 import { HeroProvider } from '@/shared/utils';
 
 const inter = Inter({

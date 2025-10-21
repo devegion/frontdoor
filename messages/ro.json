@@ -200,6 +200,147 @@
     },
     "sendMessage": "Trimite"
   },
+  "Services": {
+    "WebDevelopmentPage": {
+      "metadata": {
+        "title": "Dezvoltare Web",
+        "description": "Devegion oferă servicii de dezvoltare web de înaltă performanță, site-uri personalizate și aplicații web scalabile, optimizate pentru creștere, conversie și o experiență modernă a utilizatorilor."
+      },
+      "hero": {
+        "title": "Aplicații Web Care Vând",
+        "description": "De la idee la lansare, creăm aplicații web rapide, scalabile și centrate pe utilizator, menite să genereze creștere reală pentru afacerea ta.",
+        "callToAction": "Dă startul ideii tale"
+      },
+      "howItWorks": {
+        "title": "Cum Îți Vom Construi Site-ul",
+        "description": "Procesul nostru combină comunicarea clară, dezvoltarea agilă și designul performant pentru a asigura succesul produsului tău încă din prima zi.",
+        "stages": {
+          "stage1": {
+            "title": "Discutăm Viziunea Ta",
+            "description": "Ascultăm ideea proiectului tău, îți înțelegem obiectivele și identificăm funcționalitățile cheie care vor face produsul tău un succes."
+          },
+          "stage2": {
+            "title": "Planificare și Estimare",
+            "description": "Alegem cele mai potrivite tehnologii pentru proiectul tău. Primești un calendar clar pentru MVP, cu prețuri transparente și etape bine definite."
+          },
+          "stage3": {
+            "title": "Construim și Iterăm",
+            "description": "Rămâi la curent cu evoluția proiectului. Adaptăm direcția pe baza feedbackului tău pentru o aliniere perfectă la obiective."
+          },
+          "stage4": {
+            "title": "Suport și Scalare",
+            "description": "Lansează cu încredere, știind că suntem alături de tine pentru mentenanță, corectarea erorilor și adăugarea de noi funcționalități pe măsură ce produsul crește."
+          }
+        },
+        "callToAction": {
+          "title": "Ești pregătit să construim ceva împreună?",
+          "button": "Vreau să discutăm"
+        }
+      }
+    },
+
+    "MobileDevelopmentPage": {
+      "metadata": {
+        "title": "Dezvoltare Mobile",
+        "description": "Devegion creează aplicații mobile de înaltă calitate pentru iOS și Android, folosind cele mai moderne framework‑uri și arhitecturi scalabile. Transformăm ideile tale în experiențe mobile fluide și captivante care generează rezultate."
+      },
+      "hero": {
+        "title": "Aplicații Mobile Gata de Producție",
+        "description": "De la concept la implementare, Devegion livrează aplicații mobile rapide, sigure și cu un design excepțional, care funcționează impecabil pe orice dispozitiv.",
+        "callToAction": "Dă startul ideii tale"
+      },
+      "howItWorks": {
+        "title": "Cum Vom Construi Aplicația Ta Mobilă",
+        "description": "Procesul nostru de dezvoltare mobile combină strategia, designul și execuția agilă pentru a crea aplicații complexe care se dezvoltă odată cu afacerea ta.",
+        "stages": {
+          "stage1": {
+            "title": "Definim Viziunea Produsului",
+            "description": "Analizăm în profunzime conceptul tău, înțelegem publicul țintă și conturăm o strategie clară care leagă obiectivele afacerii de nevoile utilizatorilor."
+          },
+          "stage2": {
+            "title": "Design și Prototipare",
+            "description": "Echipa noastră de design creează interfețe intuitive și prototipuri interactive, astfel încât să poți vizualiza experiența înainte de dezvoltare."
+          },
+          "stage3": {
+            "title": "Dezvoltare, Testare și Lansare",
+            "description": "Dăm viață aplicației tale cu tehnologii robuste, asigurăm performanțe impecabile prin testare riguroasă și te ghidăm în publicarea pe App Store și Google Play."
+          }
+        },
+        "callToAction": {
+          "title": "Ești pregătit să construim ceva împreună?",
+          "button": "Vreau să discutăm"
+        }
+      }
+    },
+
+    "UIUXDesignPage": {
+      "metadata": {
+        "title": "Design UI/UX",
+        "description": "Devegion creează designuri UI/UX uimitoare care combină estetica, simplitatea și performanța. Realizăm interfețe intuitive și experiențe care cresc implicarea și convertesc vizitatorii în clienți."
+      },
+      "hero": {
+        "title": "Design la Nivel de Pixel",
+        "description": "La Devegion, proiectăm experiențe vizuale captivante, centrate pe utilizatori, care fac produsul tău să iasă în evidență într-o piață competitivă.",
+        "callToAction": "Dă startul ideii tale"
+      },
+      "howItWorks": {
+        "title": "Procesul de Design",
+        "description": "Procesul nostru de design combină creativitatea cu strategia orientată spre utilizator pentru a contura un produs care arată superb și se simte natural în utilizare.",
+        "stages": {
+          "stage1": {
+            "title": "Cercetare și Analiză",
+            "description": "Pornim prin a înțelege utilizatorii, a analiza concurența și a identifica valoarea unică a produsului tău, pentru a crea o bază solidă de design."
+          },
+          "stage2": {
+            "title": "Wireframe-uri și Prototipare",
+            "description": "Transformăm ideile în structuri clare prin wireframe-uri și prototipuri interactive, asigurând funcționalitate și claritate înaintea designului final."
+          },
+          "stage3": {
+            "title": "Design Vizual și Implementare",
+            "description": "Designerii noștri perfecționează fiecare detaliu pentru a crea un sistem vizual coerent și scalabil, livrând fișiere gata de implementare pentru echipa ta de dezvoltare."
+          }
+        },
+        "callToAction": {
+          "title": "Ești pregătit să construim ceva împreună?",
+          "button": "Vreau să discutăm"
+        }
+      }
+    },
+
+    "ConsultingPage": {
+      "metadata": {
+        "title": "Consultanță Software",
+        "description": "Devegion oferă consultanță software specializată pentru a ajuta companiile să valideze idei, să optimizeze arhitectura și să asigure scalabilitatea produselor. Te ghidăm de la concept la execuție prin strategii bazate pe date și excelență tehnică."
+      },
+      "hero": {
+        "title": "Consultanță Software Orientată pe Valoare",
+        "description": "Colaborează cu Devegion pentru a transforma provocările tale de business în soluții tehnologice concrete. Aliniem strategia, designul și tehnologia pentru a maximiza impactul și a reduce riscurile.",
+        "callToAction": "Dă startul ideii tale"
+      },
+      "howItWorks": {
+        "title": "Cum Oferim Consultanță Software",
+        "description": "Procesul nostru de consultanță îmbină expertiza tehnică aprofundată cu viziunea strategică, ajutându-te să iei decizii mai inteligente și să construiești software performant.",
+        "stages": {
+          "stage1": {
+            "title": "Evaluare și Strategie",
+            "description": "Analizăm sistemele actuale, clarificăm obiectivele de business și definim un plan de acțiune pentru a îmbunătăți performanța, scalabilitatea și eficiența generală."
+          },
+          "stage2": {
+            "title": "Design și Recomandări Tehnice",
+            "description": "În funcție de obiective, propunem arhitecturi, framework-uri și tehnologii adaptate cerințelor și capabilităților echipei tale."
+          },
+          "stage3": {
+            "title": "Implementare și Optimizare",
+            "description": "Punem în practică soluțiile propuse — supervizăm implementarea, optimizăm fluxurile și construim o bază pentru îmbunătățiri continue."
+          }
+        },
+        "callToAction": {
+          "title": "Ești pregătit să construim ceva împreună?",
+          "button": "Vreau să discutăm"
+        }
+      }
+    }
+  },
   "Header": {
     "openNavbarMenu": "Deschide meniul",
     "closeNavbarMenu": "Închide meniul",

@@ -248,7 +248,7 @@ export function Header() {
                           return (
                             <Link
                               onPress={() => {
-                                setIsMenuOpen(!false);
+                                setIsMenuOpen(false);
                               }}
                               href={subItem.href as string & RouterConfig['href']}
                               key={subItem.label}>
