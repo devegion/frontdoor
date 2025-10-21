@@ -1,8 +1,20 @@
-import { DavidImg, DamianImg, GabImg, BeaImg, PopImg, PoeImg, CristiImg } from '@/assets';
-import { RTMThumbnail, CCRThumbnail, PCThumbnail, VadrThumbnail } from '@/assets';
-import WebDevIllustration from '@/assets/web-dev.png';
-import UiUxDesignIllustration from '@/assets/ui-ux-design.png';
-import MobileDevIllustration from '@/assets/mobile-dev.png';
+import {
+  DavidImg,
+  DamianImg,
+  GabImg,
+  BeaImg,
+  PopImg,
+  PoeImg,
+  CristiImg,
+  RTMThumbnail,
+  CCRThumbnail,
+  PCThumbnail,
+  VadrThumbnail,
+  WebDevIllustration,
+  MobileDevIllustration,
+  UIUXDesignIllustration,
+} from '@/assets';
+
 import { Laptop, Tablet, PenTool, Compass } from 'lucide-react';
 
 export const developers = [
@@ -103,7 +115,7 @@ export const getServices = (t: (key: any) => any) => [
       t('services.uiuxDesign.strongPoint4'),
     ],
     icon: <PenTool />,
-    illustration: UiUxDesignIllustration,
+    illustration: UIUXDesignIllustration,
     href: '/',
     className: 'lg:col-span-2 lg:row-span-4',
     classNames: { illustrationContainer: 'flex-col-reverse lg:flex-col gap-10' },

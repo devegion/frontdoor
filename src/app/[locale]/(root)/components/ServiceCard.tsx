@@ -66,7 +66,7 @@ export function ServiceCard({
         {illustration && (
           <Image
             src={illustration}
-            alt=''
+            alt={`${title}`}
             className={cn('mx-auto h-auto w-48', classNames?.illustrationStyling)}
           />
         )}

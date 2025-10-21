@@ -45,12 +45,12 @@ export default async function HomePage({ params }: PageProps<'/[locale]'>) {
   const t = await getTranslations('HomePage');
 
   return (
-    <div className='mb-32 space-y-8 xl:mb-44 xl:space-y-16 2xl:mb-64'>
+    <div className='mb-32 space-y-16 xl:mb-44 xl:space-y-16 2xl:mb-64'>
       <Section
         isAnimated={false}
         className='flex min-h-[calc(100vh_-_80px)] flex-col items-center sm:justify-center'>
         <div className='flex w-full flex-col justify-center'>
-          <div className='mt-20 flex flex-col items-center space-y-8 pb-[calc(80px_+_10vh)] xl:mt-10 2xl:mt-0'>
+          <div className='mt-20 flex flex-col items-center gap-6 pb-[calc(80px_+_10vh)] xl:mt-10 2xl:mt-0'>
             <div className='flex flex-col items-center sm:gap-3'>
               <h1 className='font-headline text-center text-3xl font-bold sm:text-5xl xl:text-6xl'>
                 {t('hero.title.part1')}
@@ -60,7 +60,7 @@ export default async function HomePage({ params }: PageProps<'/[locale]'>) {
               </span>
             </div>
             <p className='text-default-700 max-w-2xl text-center'>{t('hero.description')}</p>
-            <div className='flex flex-col items-center justify-center gap-5 sm:flex-row'>
+            <div className='flex flex-col items-center justify-center gap-6 sm:flex-row'>
               <Button as={Link} href='/contact-us' size='lg' color='primary' radius='lg'>
                 {t('startProject')} <ArrowRight className='size-[1em]' />
               </Button>
@@ -70,14 +70,14 @@ export default async function HomePage({ params }: PageProps<'/[locale]'>) {
             </div>
           </div>
         </div>
-        <div className='mb-12 flex w-full items-center justify-center'>
+        <div className='flex w-full items-center justify-center'>
           <Stats />
         </div>
       </Section>
       <div className='space-y-32 xl:space-y-44 2xl:space-y-64'>
         <Section>
           <div className='flex w-full flex-col items-center gap-16'>
-            <div className='flex flex-col items-center gap-8'>
+            <div className='flex flex-col items-center gap-6'>
               <Chip size='md' variant='bordered' className='py-4 shadow' radius='full'>
                 {t('services.badge')}
               </Chip>
@@ -102,7 +102,7 @@ export default async function HomePage({ params }: PageProps<'/[locale]'>) {
           </div>
         </Section>
         <Section>
-          <div className='flex w-full flex-col items-center gap-8'>
+          <div className='flex w-full flex-col items-center gap-6'>
             <Chip size='md' variant='bordered' className='py-4 shadow' radius='full'>
               {t('people.badge')}
             </Chip>
@@ -111,7 +111,7 @@ export default async function HomePage({ params }: PageProps<'/[locale]'>) {
               <AnimatedTooltip items={developers} />
             </div>
             <SectionDescription>{t('people.description')}</SectionDescription>
-            <div className='flex flex-col items-center justify-center gap-5 sm:flex-row'>
+            <div className='flex flex-col items-center justify-center gap-6 sm:flex-row'>
               <Button
                 as={Link}
                 href='/about-us'
@@ -134,14 +134,14 @@ export default async function HomePage({ params }: PageProps<'/[locale]'>) {
           </div>
         </Section>
         <Section>
-          <div className='relative flex w-full flex-col items-center gap-8 lg:items-start lg:gap-16'>
+          <div className='relative flex w-full flex-col items-center gap-6 lg:items-start lg:gap-16'>
             <span id='projects' className='invisible absolute -top-10' />
             <Chip size='md' variant='bordered' className='py-4 shadow lg:hidden' radius='full'>
               {t('projects.badge')}
             </Chip>
-            <div className='flex w-full flex-col items-center gap-8 lg:items-start lg:gap-4'>
+            <div className='flex w-full flex-col items-center gap-6 lg:items-start lg:gap-4'>
               <SectionHeading>{t('projects.title')}</SectionHeading>
-              <div className='flex flex-col items-center gap-8 lg:w-full lg:flex-row lg:items-end lg:justify-between'>
+              <div className='flex flex-col items-center gap-6 lg:w-full lg:flex-row lg:items-end lg:justify-between'>
                 <SectionDescription className='lg:text-start'>
                   {t('projects.description')}
                 </SectionDescription>
@@ -174,7 +174,7 @@ export default async function HomePage({ params }: PageProps<'/[locale]'>) {
         </Section>
         <Section>
           <div className='flex w-full flex-col items-center gap-16'>
-            <div className='flex flex-col items-center gap-8'>
+            <div className='flex flex-col items-center gap-6'>
               <Chip
                 size='md'
                 variant='bordered'

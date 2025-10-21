@@ -203,24 +203,83 @@
   "Services": {
     "WebDevelopmentPage": {
       "metadata": { "title": "Web Development", "description": "" },
-      "hero": { "title": "Web Apps That Sell", "description": "Some crazy good description" }
+      "hero": {
+        "title": "Web Apps That Sell",
+        "description": "Some crazy good description",
+        "callToAction": "Kickstart your idea"
+      },
+      "howItWorks": {
+        "title": "How We'll Build Your Website",
+        "description": "Some crazy good description",
+        "stages": {
+          "stage1": {
+            "title": "Discuss Your Vision",
+            "description": "We listen to your project idea, understand your goals, and identify the key features that will make your product successful."
+          },
+          "stage2": {
+            "title": "Plan & Estimate",
+            "description": "Choose the best tools and technologies for your project. Get a clear MVP timeline with transparent pricing and milestones."
+          },
+          "stage3": {
+            "title": "Build & Iterate",
+            "description": "Stay in the loop with regular progress updates. We adapt and pivot based on your feedback to ensure perfect alignment"
+          },
+          "stage4": {
+            "title": "Support & Scale",
+            "description": "Launch with confidence knowing we're here for maintenance, bug fixes, and adding new features as your product grows."
+          }
+        }
+      }
     },
     "MobileDevelopmentPage": {
       "metadata": { "title": "Mobile Development", "description": "" },
       "hero": {
         "title": "Production Ready Mobile Apps",
-        "description": "Some crazy good description"
+        "description": "Some crazy good description",
+        "callToAction": "Kickstart your idea"
+      },
+      "howItWorks": {
+        "title": "How We'll Build Your Mobile App",
+        "description": "Some crazy good description",
+        "stages": {
+          "stage1": { "title": "", "description": "" },
+          "stage2": { "title": "", "description": "" },
+          "stage3": { "title": "", "description": "" }
+        }
       }
     },
     "UIUXDesignPage": {
       "metadata": { "title": "UI/UX Design", "description": "" },
-      "hero": { "title": "Pixel-Perfect Design", "description": "Some crazy good description" }
+      "hero": {
+        "title": "Pixel-Perfect Design",
+        "description": "Some crazy good description",
+        "callToAction": "Kickstart your idea"
+      },
+      "howItWorks": {
+        "title": "The Design Process",
+        "description": "Some crazy good description",
+        "stages": {
+          "stage1": { "title": "", "description": "" },
+          "stage2": { "title": "", "description": "" },
+          "stage3": { "title": "", "description": "" }
+        }
+      }
     },
     "ConsultingPage": {
       "metadata": { "title": "Software Consulting", "description": "" },
       "hero": {
         "title": "Value Focused Software Consulting",
-        "description": "Some crazy good description"
+        "description": "Some crazy good description",
+        "callToAction": "Kickstart your idea"
+      },
+      "howItWorks": {
+        "title": "How We Do Software Consulting",
+        "description": "Some crazy good description",
+        "stages": {
+          "stage1": { "title": "", "description": "" },
+          "stage2": { "title": "", "description": "" },
+          "stage3": { "title": "", "description": "" }
+        }
       }
     }
   },
