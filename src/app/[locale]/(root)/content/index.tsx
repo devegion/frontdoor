@@ -120,7 +120,7 @@ export const getServices = (t: (key: any) => any) => [
     ],
     icon: <PenTool />,
     illustration: UIUXDesignIllustration,
-    href: '/',
+    href: '/services/uiux-design',
     className: 'lg:col-span-2 lg:row-span-4',
     classNames: { illustrationContainer: 'flex-col-reverse lg:flex-col gap-10' },
   },
@@ -135,7 +135,7 @@ export const getServices = (t: (key: any) => any) => [
     ],
     icon: <Tablet />,
     illustration: MobileDevIllustration,
-    href: '/',
+    href: '/services/mobile-development',
     className: 'lg:col-span-3 lg:row-span-3',
     classNames: {
       illustrationContainer: 'flex-col-reverse lg:flex-row items-start gap-4',
@@ -146,7 +146,7 @@ export const getServices = (t: (key: any) => any) => [
     description: t('services.consulting.description'),
     strongPoints: [t('services.consulting.strongPoint1'), t('services.consulting.strongPoint2')],
     icon: <Compass />,
-    href: '/',
+    href: '/services/consulting',
     className: 'lg:col-span-2 lg:row-span-2',
   },
 ];
