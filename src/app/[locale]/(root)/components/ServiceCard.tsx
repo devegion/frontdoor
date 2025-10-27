@@ -30,6 +30,7 @@ export function ServiceCard({
 
   return (
     <Link
+      aria-label={title}
       color='foreground'
       href={href}
       className={cn(

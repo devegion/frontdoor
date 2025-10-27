@@ -205,7 +205,12 @@ export function Header() {
         <Dropdown showArrow classNames={{ content: 'min-w-auto' }} shouldBlockScroll={false}>
           <NavbarItem>
             <DropdownTrigger>
-              <Button disableRipple radius='lg' variant='flat' isIconOnly>
+              <Button
+                aria-label={isMenuOpen ? t('closeLanguageSelector') : t('openLanguageSelector')}
+                disableRipple
+                radius='lg'
+                variant='flat'
+                isIconOnly>
                 <Languages className='size-5' />
               </Button>
             </DropdownTrigger>

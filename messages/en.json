@@ -71,7 +71,7 @@
         "title": "PaulPhoto",
         "description": "A custom-made web portfolio platform for a photographer. Showcase stunning photography collections with flexible layouts, easy content management, and a professional presentation that lets the work speak for itself."
       },
-      "mcdermot": {
+      "mcDermot": {
         "title": "MCDermot",
         "description": "A custom-built web platform for a UK landscaping company. Highlight beautiful outdoor transformations with a modern, fully bespoke design powered by a headless CMS."
       }
@@ -345,6 +345,8 @@
   "Header": {
     "openNavbarMenu": "Close menu",
     "closeNavbarMenu": "Open menu",
+    "openLanguageSelector": "Open language selector",
+    "closeLanguageSelector": "Close language selector",
     "services": {
       "title": "Services",
       "aria": "Services Menu",

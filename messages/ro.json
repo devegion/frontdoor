@@ -344,6 +344,8 @@
   "Header": {
     "openNavbarMenu": "Deschide meniul",
     "closeNavbarMenu": "Închide meniul",
+    "openLanguageSelector": "Deschide meniul de limba",
+    "closeLanguageSelector": "Închide meniul de limba",
     "services": {
       "title": "Servicii",
       "aria": "Meniu Servicii",

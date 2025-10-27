@@ -6,15 +6,15 @@ import CristiImg from '@/assets/developers/cristi.webp';
 import PopImg from '@/assets/developers/pop.webp';
 import PoeImg from '@/assets/developers/poe.webp';
 
-import RTMThumbnail from '@/assets/projects/rtm_thumbnail.png';
-import CCRThumbnail from '@/assets/projects/ccr_thumbnail.png';
-import PCThumbnail from '@/assets/projects/pc_thumbnail.png';
-import MCThumbnail from '@/assets/projects/mc_thumbnail.png';
+import RTMThumbnail from '@/assets/projects/rtm_thumbnail.webp';
+import CCRThumbnail from '@/assets/projects/ccr_thumbnail.webp';
+import PCThumbnail from '@/assets/projects/pc_thumbnail.webp';
+import MCThumbnail from '@/assets/projects/mc_thumbnail.webp';
 
-import WebDevIllustration from '@/assets/illustrations/web-dev.png';
-import MobileDevIllustration from '@/assets/illustrations/mobile-dev.png';
-import UIUXDesignIllustration from '@/assets/illustrations/ui-ux-design.png';
-import ConsultingIllustation from '@/assets/illustrations/consulting.png';
+import WebDevIllustration from '@/assets/illustrations/web-dev.webp';
+import MobileDevIllustration from '@/assets/illustrations/mobile-dev.webp';
+import UIUXDesignIllustration from '@/assets/illustrations/ui-ux-design.webp';
+import ConsultingIllustation from '@/assets/illustrations/consulting.webp';
 
 export {
   DavidImg,

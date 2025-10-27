@@ -53,7 +53,14 @@ export function ProjectCard({
             href={projectLink}>
             {t('viewDetails')}
           </Button>
-          <Button as={Link} radius='lg' variant='light' isExternal href={projectLink} isIconOnly>
+          <Button
+            as={Link}
+            aria-label={t('viewDetails')}
+            radius='lg'
+            variant='light'
+            isExternal
+            href={projectLink}
+            isIconOnly>
             <SquareArrowOutUpRight className='size-5' />
           </Button>
         </div>

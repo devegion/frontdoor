@@ -83,8 +83,8 @@ export const getProjects = (t: (key: any) => any) => [
     image: PCThumbnail,
   },
   {
-    title: t('projects.mcdermot.title'),
-    description: t('projects.mcdermot.description'),
+    title: t('projects.mcDermot.title'),
+    description: t('projects.mcDermot.description'),
     link: 'https://remarkable-youtiao-a10fa9.netlify.app/',
     image: MCThumbnail,
   },
